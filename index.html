@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV Lý Xuân Tiến - Kỹ Sư Công Nghệ Kỹ Thuật Ô Tô & Giảng Viên</title>
+  <meta name="description" content="Hồ sơ năng lực chuẩn hóa của Lý Xuân Tiến - Kỹ sư Công nghệ Kỹ thuật Ô tô, Giảng viên chuyên ngành Ô tô & Ủy viên Ban Thường vụ Đoàn trường." />
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    :root {
+      --primary: #0f4c81;
+      --primary-hover: #09355c;
+      --primary-light: #2563eb;
+      --primary-subtle: #eff6ff;
+      --primary-dark: #0a2540;
+      --accent: #d97706;
+      --accent-subtle: #fef3c7;
+      --success: #16a34a;
+      --success-subtle: #f0fdf4;
+      --text-main: #0f172a;
+      --text-muted: #334155;
+      --text-subtle: #64748b;
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-alt: #f1f5f9;
+      --border-color: #e2e8f0;
+      --border-subtle: #f1f5f9;
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
+      --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 14px;
+      --radius-full: 9999px;
+      --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    [data-theme="dark"] {
+      --primary: #60a5fa;
+      --primary-hover: #93c5fd;
+      --primary-light: #3b82f6;
+      --primary-subtle: #1e293b;
+      --primary-dark: #1e3a8a;
+      --accent: #f59e0b;
+      --accent-subtle: #451a03;
+      --success: #4ade80;
+      --success-subtle: #052e16;
+      --text-main: #f8fafc;
+      --text-muted: #cbd5e1;
+      --text-subtle: #94a3b8;
+      --bg-body: #090d16;
+      --bg-card: #131c2e;
+      --bg-alt: #182438;
+      --border-color: #24344d;
+      --border-subtle: #1e293b;
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+      --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 24px 16px 40px;
+      -webkit-font-smoothing: antialiased;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Top Action Bar */
+    .top-action-bar {
+      max-width: 1040px;
+      margin: 0 auto 18px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .verification-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--success-subtle);
+      color: var(--success);
+      border: 1px solid rgba(22, 163, 74, 0.25);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background-color: var(--success);
+      border-radius: 50%;
+      box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.25);
+      animation: pulseDot 2s infinite;
+    }
+
+    @keyframes pulseDot {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.3); opacity: 0.6; }
+    }
+
+    .action-btns {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: var(--radius-md);
+      font-size: 0.875rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid var(--border-color);
+      background-color: var(--bg-card);
+      color: var(--text-main);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      border-color: var(--primary-light);
+      color: var(--primary-light);
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #0f4c81 0%, #1e40af 100%);
+      color: #ffffff;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #0a335c 0%, #1e3a8a 100%);
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(15, 76, 129, 0.35);
+    }
+
+    /* CV Document Paper */
+    .cv-document {
+      max-width: 1040px;
+      margin: 0 auto;
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+    }
+
+    /* CV Header */
+    .cv-header {
+      background: linear-gradient(135deg, #0a192f 0%, #0f4c81 60%, #1e3a8a 100%);
+      color: #ffffff;
+      padding: 38px 44px;
+      position: relative;
+    }
+
+    .cv-header::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #d97706, #3b82f6, #10b981);
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .avatar-box {
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .avatar-img {
+      width: 145px;
+      height: 145px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 15%;
+      border: 3.5px solid #ffffff;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      background-color: #cbd5e1;
+      display: block;
+    }
+
+    .verified-icon {
+      position: absolute;
+      bottom: 4px;
+      right: 4px;
+      background: #2563eb;
+      color: #ffffff;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      border: 2.5px solid #0a192f;
+    }
+
+    .header-details {
+      flex: 1;
+    }
+
+    .candidate-name {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      color: #ffffff;
+    }
+
+    .candidate-roles {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+
+    .role-badge {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #f1f5f9;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .role-badge.primary-role {
+      background: #2563eb;
+      border-color: #60a5fa;
+      color: #ffffff;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 8px 18px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.88rem;
+      color: #e2e8f0;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .contact-link:hover {
+      color: #93c5fd;
+    }
+
+    .contact-link i {
+      color: #60a5fa;
+      width: 16px;
+      text-align: center;
+    }
+
+    /* CV Layout 2 Columns */
+    .cv-grid {
+      display: grid;
+      grid-template-columns: 330px 1fr;
+    }
+
+    /* Left Sidebar */
+    .cv-aside {
+      background-color: var(--bg-alt);
+      border-right: 1px solid var(--border-color);
+      padding: 32px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    /* Right Main */
+    .cv-section-main {
+      padding: 32px 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    /* Section Headings */
+    .sec-heading {
+      font-size: 1.08rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-main);
+      margin-bottom: 18px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      position: relative;
+    }
+
+    .sec-heading::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 42px;
+      height: 2px;
+      background: var(--primary);
+    }
+
+    .sec-heading i {
+      color: var(--primary);
+      font-size: 1.05rem;
+    }
+
+    /* Profile / Summary Callout */
+    .profile-card {
+      background: var(--primary-subtle);
+      border-left: 4px solid var(--primary);
+      padding: 16px 18px;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      font-size: 0.925rem;
+      color: var(--text-main);
+      line-height: 1.65;
+    }
+
+    /* Education Card */
+    .card-block {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 14px 16px;
+      margin-bottom: 14px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .card-block:hover {
+      border-color: var(--primary-light);
+      box-shadow: var(--shadow-md);
+    }
+
+    .card-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 3px;
+    }
+
+    .card-sub {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+
+    .card-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8rem;
+      color: var(--text-subtle);
+      margin-bottom: 8px;
+    }
+
+    .card-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      padding-top: 6px;
+      border-top: 1px dashed var(--border-color);
+    }
+
+    /* Skill Grouping */
+    .skill-group {
+      margin-bottom: 18px;
+    }
+
+    .skill-group-title {
+      font-size: 0.825rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-subtle);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .tag {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 5px 10px;
+      border-radius: var(--radius-sm);
+      font-size: 0.825rem;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: var(--transition);
+    }
+
+    .tag:hover {
+      border-color: var(--primary-light);
+      background: var(--primary-subtle);
+      color: var(--primary);
+    }
+
+    .tag.highlight {
+      background: var(--primary-subtle);
+      border-color: var(--primary-light);
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* Timeline Section */
+    .exp-timeline {
+      position: relative;
+      padding-left: 22px;
+    }
+
+    .exp-timeline::before {
+      content: "";
+      position: absolute;
+      left: 6px;
+      top: 6px;
+      bottom: 6px;
+      width: 2px;
+      background: var(--border-color);
+    }
+
+    .timeline-node {
+      position: relative;
+      margin-bottom: 24px;
+    }
+
+    .timeline-node:last-child {
+      margin-bottom: 0;
+    }
+
+    .node-marker {
+      position: absolute;
+      left: -22px;
+      top: 5px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--bg-card);
+      border: 3px solid var(--primary);
+      box-shadow: 0 0 0 3px var(--primary-subtle);
+    }
+
+    .node-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-bottom: 3px;
+    }
+
+    .node-title {
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .node-badge {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--primary);
+      background: var(--primary-subtle);
+      padding: 2px 8px;
+      border-radius: var(--radius-full);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .node-company {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .bullet-points {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .bullet-points li {
+      position: relative;
+      padding-left: 16px;
+      margin-bottom: 6px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    .bullet-points li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--primary-light);
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    .bullet-points li strong {
+      color: var(--text-main);
+    }
+
+    /* Verification / Certificate Grid */
+    .cert-list-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+    }
+
+    .cert-item-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 12px 14px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .cert-item-card:hover {
+      border-color: var(--primary-light);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      background: var(--bg-alt);
+    }
+
+    .cert-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: var(--radius-sm);
+      background: var(--primary-subtle);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .cert-content {
+      flex: 1;
+    }
+
+    .cert-name {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.3;
+      margin-bottom: 3px;
+    }
+
+    .cert-issuer {
+      font-size: 0.775rem;
+      color: var(--text-subtle);
+      margin-bottom: 4px;
+    }
+
+    .cert-footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.75rem;
+    }
+
+    .cert-rank {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .cert-action {
+      color: var(--primary-light);
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+    }
+
+    /* Modal / Lightbox */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal-dialog {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      max-width: 860px;
+      width: 100%;
+      max-height: 92vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+      border: 1px solid var(--border-color);
+      overflow: hidden;
+      animation: modalFadeIn 0.2s ease-out;
+    }
+
+    @keyframes modalFadeIn {
+      from { transform: scale(0.96); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .modal-top {
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border-color);
+      background-color: var(--bg-card);
+    }
+
+    .modal-heading {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .modal-top-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .modal-icon-btn {
+      background: var(--bg-alt);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 6px 12px;
+      border-radius: var(--radius-sm);
+      font-size: 0.825rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition);
+    }
+
+    .modal-icon-btn:hover {
+      background: var(--primary-subtle);
+      color: var(--primary);
+      border-color: var(--primary-light);
+    }
+
+    .modal-close-btn {
+      background: transparent;
+      border: none;
+      font-size: 1.4rem;
+      color: var(--text-subtle);
+      cursor: pointer;
+      padding: 2px 6px;
+      line-height: 1;
+    }
+
+    .modal-close-btn:hover {
+      color: #ef4444;
+    }
+
+    .modal-view {
+      padding: 16px;
+      overflow: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #0f172a;
+      min-height: 380px;
+    }
+
+    .modal-img-element {
+      max-width: 100%;
+      max-height: 65vh;
+      object-fit: contain;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease;
+      transform-origin: center center;
+    }
+
+    .modal-bottom {
+      padding: 12px 20px;
+      background: var(--bg-card);
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.825rem;
+      color: var(--text-muted);
+    }
+
+    .cv-foot {
+      text-align: center;
+      padding: 18px;
+      font-size: 0.825rem;
+      color: var(--text-subtle);
+      border-top: 1px solid var(--border-color);
+      background-color: var(--bg-alt);
+    }
+
+    /* Responsive */
+    @media (max-width: 880px) {
+      .cv-grid {
+        grid-template-columns: 1fr;
+      }
+      .cv-aside {
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        padding: 24px 20px;
+      }
+      .cv-section-main {
+        padding: 24px 20px;
+      }
+      .cv-header {
+        padding: 28px 20px;
+      }
+      .header-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 18px;
+      }
+      .candidate-roles {
+        justify-content: center;
+      }
+      .contact-grid {
+        justify-content: center;
+        text-align: left;
+      }
+    }
+
+    /* PRINT / PDF STYLES */
+    @media print {
+      @page {
+        size: A4 portrait;
+        margin: 8mm 10mm;
+      }
+
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        padding: 0 !important;
+        font-size: 10pt !important;
+      }
+
+      .top-action-bar,
+      .modal-overlay,
+      .cert-action {
+        display: none !important;
+      }
+
+      .cv-document {
+        box-shadow: none !important;
+        border: none !important;
+        max-width: 100% !important;
+        border-radius: 0 !important;
+      }
+
+      .cv-header {
+        background: #0f4c81 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        color: #ffffff !important;
+        padding: 20px 24px !important;
+      }
+
+      .cv-grid {
+        grid-template-columns: 280px 1fr !important;
+      }
+
+      .cv-aside {
+        background: #f8fafc !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        padding: 20px 16px !important;
+      }
+
+      .cv-section-main {
+        padding: 20px 20px !important;
+      }
+
+      .timeline-node, .card-block, .cert-item-card {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Action Bar (Print / PDF / Theme Switcher) -->
+  <div class="top-action-bar">
+    <div class="verification-status">
+      <span class="status-dot"></span>
+      <span>Hồ sơ đã được số hóa & xác thực toàn bộ bằng cấp gốc</span>
+    </div>
+    <div class="action-btns">
+      <button class="btn" id="themeToggle" onclick="toggleTheme()" title="Chuyển chế độ Sáng / Tối">
+        <i class="fa-solid fa-moon"></i>
+        <span>Giao diện</span>
+      </button>
+      <button class="btn btn-primary" onclick="window.print()" title="Lưu thành file PDF tiêu chuẩn hoặc In ấn">
+        <i class="fa-solid fa-print"></i>
+        <span>Xuất PDF / In CV</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Main CV Container -->
+  <main class="cv-document">
+    
+    <!-- Profile Header -->
+    <header class="cv-header">
+      <div class="header-content">
+        <div class="avatar-box">
+          <img src="Screenshot 2026-08-14 at 13.39.01.png" alt="Ảnh chân dung Lý Xuân Tiến" class="avatar-img" />
+          <div class="verified-icon" title="Hồ sơ văn bằng chính quy đã xác thực">
+            <i class="fa-solid fa-check"></i>
+          </div>
+        </div>
+
+        <div class="header-details">
+          <h1 class="candidate-name">LÝ XUÂN TIẾN</h1>
+          
+          <div class="candidate-roles">
+            <span class="role-badge primary-role"><i class="fa-solid fa-car-side"></i> Kỹ Sư Công Nghệ Kỹ Thuật Ô Tô</span>
+            <span class="role-badge"><i class="fa-solid fa-chalkboard-user"></i> Giảng Viên Nghề Ô Tô</span>
+            <span class="role-badge"><i class="fa-solid fa-users"></i> UV BTV Đoàn Trường</span>
+          </div>
+
+          <div class="contact-grid">
+            <a href="tel:0394329121" class="contact-link">
+              <i class="fa-solid fa-phone"></i>
+              <span><strong>0394 329 121</strong></span>
+            </a>
+            <a href="mailto:tienly804@gmail.com" class="contact-link">
+              <i class="fa-solid fa-envelope"></i>
+              <span>tienly804@gmail.com</span>
+            </a>
+            <div class="contact-link">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Tam Chúc, Ninh Bình (Gốc: Hà Nam)</span>
+            </div>
+            <div class="contact-link">
+              <i class="fa-solid fa-calendar-day"></i>
+              <span>19/04/2003</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- 2 Column Body -->
+    <div class="cv-grid">
+      
+      <!-- Left Column -->
+      <aside class="cv-aside">
+        
+        <!-- Mục tiêu nghề nghiệp -->
+        <div>
+          <h2 class="sec-heading">
+            <i class="fa-solid fa-bullseye"></i> Mục Tiêu
+          </h2>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+            Phát huy nền tảng <strong>Kỹ sư Công nghệ Kỹ thuật Ô tô</strong>, chứng chỉ <strong>Nghiệp vụ Sư phạm Dạy nghề</strong> và kỹ năng thực tế tại xưởng; cống hiến vào công tác giảng dạy, đào tạo nguồn nhân lực kỹ thuật chất lượng cao, đồng thời sẵn sàng đảm nhận vai trò quản lý kỹ thuật và chuyển giao công nghệ mới.
+          </p>
+        </div>
+
+        <!-- Học vấn & Bằng cấp -->
+        <div>
+          <h2 class="sec-heading">
+            <i class="fa-solid fa-graduation-cap"></i> Học Vấn
+          </h2>
+
+          <!-- Bằng Đại học -->
+          <div class="card-block">
+            <div class="card-title">Bằng Kỹ Sư Công Nghệ KT Ô Tô</div>
+            <div class="card-sub">ĐH Sư Phạm Kỹ Thuật Nam Định</div>
+            <div class="card-meta">
+              <span><i class="fa-regular fa-calendar"></i> 2021 – 2025</span>
+              <span>•</span>
+              <span style="color: var(--success); font-weight: 600;">Tốt nghiệp: Loại Khá</span>
+            </div>
+            <div class="card-desc">
+              <strong>Đề tài tốt nghiệp:</strong> Nghiên cứu, thiết kế & chế tạo mô hình hệ thống phun xăng điện tử (EFI) phục vụ đào tạo thực nghiệm trực quan.
+            </div>
+          </div>
+
+          <!-- Bằng Cao đẳng -->
+          <div class="card-block">
+            <div class="card-title">Kỹ Sư Thực Hành Ô Tô</div>
+            <div class="card-sub">Trường Cao Đẳng Nghề Hà Nam</div>
+            <div class="card-meta">
+              <span><i class="fa-regular fa-calendar"></i> 2021 – 2023</span>
+              <span>•</span>
+              <span>Chính quy</span>
+            </div>
+            <div class="card-desc">
+              Trang bị tay nghề thực tế vững vàng về quy trình đại tu động cơ, khung gầm, hệ thống truyền lực và hệ thống phanh - lái.
+            </div>
+          </div>
+        </div>
+
+        <!-- Kỹ năng chuyên môn -->
+        <div>
+          <h2 class="sec-heading">
+            <i class="fa-solid fa-gears"></i> Kỹ Năng Cốt Lõi
+          </h2>
+
+          <!-- Chuyên môn ô tô -->
+          <div class="skill-group">
+            <div class="skill-group-title">
+              <i class="fa-solid fa-wrench"></i> Kỹ Thuật Ô Tô
+            </div>
+            <div class="tag-cloud">
+              <span class="tag highlight">Động cơ Đốt trong</span>
+              <span class="tag highlight">Phun xăng Điện tử EFI</span>
+              <span class="tag highlight">Hệ thống Khung gầm</span>
+              <span class="tag">Chẩn đoán Mã lỗi OBD-II</span>
+              <span class="tag">Hệ thống Điện - Điện tử Ô tô</span>
+              <span class="tag">Bảo dưỡng Cấp định kỳ</span>
+              <span class="tag">Cân chỉnh Góc đặt bánh xe</span>
+            </div>
+          </div>
+
+          <!-- Sư phạm & Quản trị -->
+          <div class="skill-group">
+            <div class="skill-group-title">
+              <i class="fa-solid fa-chalkboard-user"></i> Sư Phạm & Quản Lý Xưởng
+            </div>
+            <div class="tag-cloud">
+              <span class="tag highlight">Giảng dạy Tích hợp</span>
+              <span class="tag highlight">Bài giảng E-Learning</span>
+              <span class="tag">Văn hóa Xưởng 5S</span>
+              <span class="tag">An toàn Lao động Ô tô</span>
+              <span class="tag">Công tác Chủ nhiệm & Quản lý lớp</span>
+            </div>
+          </div>
+
+          <!-- Ngoại ngữ & Tin học -->
+          <div class="skill-group">
+            <div class="skill-group-title">
+              <i class="fa-solid fa-globe"></i> Ngoại Ngữ & Tin Học
+            </div>
+            <div class="tag-cloud">
+              <span class="tag highlight">Tiếng Anh B1 (Versant Pearson)</span>
+              <span class="tag">Chuẩn CNTT Trình độ ĐH</span>
+              <span class="tag">Phần mềm Tra cứu Sơ đồ Mạch</span>
+            </div>
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- Right Main Column -->
+      <section class="cv-section-main">
+        
+        <!-- Tóm tắt hồ sơ năng lực -->
+        <div class="profile-card">
+          <i class="fa-solid fa-shield-halved" style="color: var(--primary); margin-right: 6px;"></i>
+          <strong>TỔNG QUAN NĂNG LỰC:</strong> Ứng viên có sự kết hợp hoàn hảo giữa <strong>nền tảng Kỹ sư chuyên môn bài bản</strong>, <strong>nghiệp vụ Sư phạm Dạy nghề chính quy</strong>, <strong>kinh nghiệm sửa chữa thực tế tại xưởng/gara</strong> và <strong>năng lực lãnh đạo phong trào Đoàn thể</strong>. Tác phong công nghiệp chuẩn mực, kỹ năng truyền đạt lôi cuốn và khả năng làm việc độc lập cũng như theo nhóm hiệu quả.
+        </div>
+
+        <!-- Kinh nghiệm làm việc -->
+        <div>
+          <h2 class="sec-heading">
+            <i class="fa-solid fa-briefcase"></i> Kinh Nghiệm Làm Việc & Giảng Dạy
+          </h2>
+
+          <div class="exp-timeline">
+            
+            <!-- Vị trí 1: Giáo viên Cao đẳng Nghề Hà Nam -->
+            <div class="timeline-node">
+              <div class="node-marker"></div>
+              <div class="node-header">
+                <h3 class="node-title">Giáo Viên Khoa Công Nghệ Ô Tô & UV Ban Thường Vụ Đoàn Trường</h3>
+                <span class="node-badge">08/2023 – Hiện tại</span>
+              </div>
+              <div class="node-company">Trường Cao Đẳng Nghề Hà Nam</div>
+              <ul class="bullet-points">
+                <li>
+                  <strong>Giảng dạy chuyên môn:</strong> Trực tiếp phụ trách giảng dạy lý thuyết và hướng dẫn thực hành chuyên sâu các học phần: <em>Kết cấu & Sửa chữa Động cơ đốt trong</em>, <em>Hệ thống Gầm - Truyền lực</em>, <em>Hệ thống Nhiên liệu và Đánh lửa điện tử</em>.
+                </li>
+                <li>
+                  <strong>Đào tạo tay nghề & Chẩn đoán:</strong> Hướng dẫn sinh viên thành thạo quy trình tháo lắp, kiểm tra thông số kỹ thuật, chẩn đoán sự cố bằng thiết bị quét lỗi chuyên dụng và khắc phục pan bệnh thực tế.
+                </li>
+                <li>
+                  <strong>Quản lý xưởng & Chuẩn hóa 5S:</strong> Triển khai nghiêm ngặt văn hóa 5S và quy tắc An toàn vệ sinh lao động trong toàn bộ khu vực xưởng thực hành công nghệ ô tô.
+                </li>
+                <li>
+                  <strong>Công tác Giáo viên Chủ nhiệm:</strong> Quản lý nền nếp học tập, đánh giá rèn luyện sinh viên, kết nối cơ hội thực tập và việc làm cho sinh viên tại các doanh nghiệp đối tác.
+                </li>
+                <li>
+                  <strong>Công tác Đoàn thanh niên:</strong> Với cương vị Ủy viên BTV Đoàn trường, chủ trì lập kế hoạch, phát động các phong trào thi đua học tập, hội thi tay nghề kỹ thuật; được <strong>BCH Thành Đoàn Phủ Lý trao tặng Giấy khen xuất sắc</strong>.
+                </li>
+              </ul>
+            </div>
+
+            <!-- Vị trí 2: Kỹ thuật viên Gara Ô tô -->
+            <div class="timeline-node">
+              <div class="node-marker"></div>
+              <div class="node-header">
+                <h3 class="node-title">Kỹ Thuật Viên Sửa Chữa & Bảo Dưỡng Ô Tô</h3>
+                <span class="node-badge">Thực tế Xưởng</span>
+              </div>
+              <div class="node-company">Gara Ô Tô Tuấn Thành</div>
+              <ul class="bullet-points">
+                <li>
+                  <strong>Bảo dưỡng định kỳ:</strong> Thực hiện các cấp bảo dưỡng nhanh cho các dòng xe con và xe du lịch: thay dầu, lọc dầu, kiểm tra hệ thống phanh, xúc rửa kim phun, kiểm tra áp suất và cân chỉnh góc đặt bánh xe.
+                </li>
+                <li>
+                  <strong>Sửa chữa gầm - máy:</strong> Tiếp nhận và trực tiếp xử lý các lỗi kỹ thuật về hệ thống treo, thước lái, rotuyn, moay-ơ, đại tu phanh và hệ thống xả.
+                </li>
+                <li>
+                  <strong>Kiểm tra chẩn đoán:</strong> Sử dụng máy đo kiểm và chạy thử xe để phát hiện các âm thanh lạ, tiếng gõ động cơ và rò rỉ dầu nhớt.
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Dự án Nổi bật -->
+        <div>
+          <h2 class="sec-heading">
+            <i class="fa-solid fa-diagram-project"></i> Dự Án Nghiên Cứu & Đào Tạo
+          </h2>
+          <div class="card-block" style="border-left: 4px solid var(--primary);">
+            <div class="node-header">
+              <div class="card-title">Thiết Kế & Chế Tạo Mô Hình Hệ Thống Phun Xăng Điện Tử (EFI) Trực Quan</div>
+              <span class="node-badge">Công trình Nghiên cứu SPKT</span>
+            </div>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 6px; line-height: 1.6;">
+              • <strong>Giải pháp:</strong> Nghiên cứu và chế tạo thành công sa bàn mô hình hệ thống phun xăng điện tử với đầy đủ ECU điều khiển, cảm biến khí nạp, cảm biến trục khuỷu, cảm biến vị trí bướm ga và kim phun áp lực cao.<br/>
+              • <strong>Ứng dụng:</strong> Giúp học viên quan sát trực quan quy trình phối khí, thời điểm phun xăng, tạo lỗi giả lập để rèn luyện kỹ năng đọc mã lỗi chẩn đoán trên thiết bị OBD-II.
+            </p>
+          </div>
+        </div>
+
+        <!-- Văn Bằng, Chứng Chỉ & Khen Thưởng (Đính kèm ảnh minh chứng) -->
+        <div>
+          <h2 class="sec-heading">
+            <i class="fa-solid fa-award"></i> Văn Bằng, Chứng Chỉ & Khen Thưởng Xác Thực
+          </h2>
+          <p style="font-size: 0.825rem; color: var(--text-subtle); margin-bottom: 12px;">
+            <i class="fa-solid fa-circle-info"></i> Nhấp vào thẻ bất kỳ để xem trực tiếp ảnh chụp văn bằng / chứng chỉ gốc:
+          </p>
+
+          <div class="cert-list-grid">
+            
+            <!-- 1. Bằng Kỹ Sư ĐH SPKT Nam Định -->
+            <div class="cert-item-card" onclick="openCertModal('Bằng Kỹ Sư Công Nghệ Kỹ Thuật Ô Tô', 'a68c50a8-720a-4b4a-ad54-dd13c8ffa014.jpeg', 'Trường ĐH Sư Phạm Kỹ Thuật Nam Định cấp ngày 30/06/2025. Hạng tốt nghiệp: KHÁ. Số hiệu: A 003251.')">
+              <div class="cert-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+              <div class="cert-content">
+                <div class="cert-name">Bằng Kỹ Sư Công Nghệ KT Ô Tô</div>
+                <div class="cert-issuer">ĐH Sư Phạm Kỹ Thuật Nam Định</div>
+                <div class="cert-footer-row">
+                  <span class="cert-rank">Hạng Khá (2025)</span>
+                  <span class="cert-action"><i class="fa-regular fa-eye"></i> Xem gốc</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. Nghiệp Vụ Sư Phạm CĐ Cơ Điện HN -->
+            <div class="cert-item-card" onclick="openCertModal('Chứng Chỉ Nghiệp Vụ Sư Phạm Dạy Cao Đẳng, Trung Cấp', '72c8ae15-c576-4e4f-a770-b8c5c1a7f272.jpeg', 'Trường Cao Đẳng Cơ Điện Hà Nội cấp ngày 08/06/2023. Xếp loại: KHÁ. Chứng chỉ tiêu chuẩn giảng dạy nghề nghiệp.')">
+              <div class="cert-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+              <div class="cert-content">
+                <div class="cert-name">Nghiệp Vụ Sư Phạm Dạy CĐ & TC</div>
+                <div class="cert-issuer">Trường CĐ Cơ Điện Hà Nội</div>
+                <div class="cert-footer-row">
+                  <span class="cert-rank">Xếp loại Khá (2023)</span>
+                  <span class="cert-action"><i class="fa-regular fa-eye"></i> Xem gốc</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. Giấy Khen Thành Đoàn Phủ Lý -->
+            <div class="cert-item-card" onclick="openCertModal('Giấy Khen Thành Đoàn TP Phủ Lý', '283bfdb7-5099-4556-9307-81d6da9aabc2.jpeg', 'BCH Đoàn TNCS Hồ Chí Minh TP Phủ Lý trao tặng Lý Xuân Tiến - UV BTV Đoàn trường CĐ Nghề Hà Nam vì thành tích xuất sắc trong công tác Đoàn năm học 2024 - 2025.')">
+              <div class="cert-icon" style="color: #ea580c; background: #fff7ed;"><i class="fa-solid fa-medal"></i></div>
+              <div class="cert-content">
+                <div class="cert-name">Giấy Khen Thành Đoàn Phủ Lý</div>
+                <div class="cert-issuer">Thành Đoàn TP Phủ Lý (2025)</div>
+                <div class="cert-footer-row">
+                  <span class="cert-rank">Thành tích Xuất sắc</span>
+                  <span class="cert-action"><i class="fa-regular fa-eye"></i> Xem gốc</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4. Tiêu Chuẩn Chức Danh Nghề Nghiệp Viên Chức GDNN -->
+            <div class="cert-item-card" onclick="openCertModal('Chứng Nhận Chức Danh Nghề Nghiệp Viên Chức GDNN', 'cd5a997b-528c-4266-b324-4a39c34e2cf2.jpeg', 'Trường Cao Đẳng Cơ Điện Phú Thọ cấp ngày 22/04/2024. Bồi dưỡng theo tiêu chuẩn chức danh nghề nghiệp viên chức chuyên ngành GDNN.')">
+              <div class="cert-icon"><i class="fa-solid fa-certificate"></i></div>
+              <div class="cert-content">
+                <div class="cert-name">Chức Danh Nghề Nghiệp GV GDNN</div>
+                <div class="cert-issuer">Trường CĐ Cơ Điện Phú Thọ</div>
+                <div class="cert-footer-row">
+                  <span class="cert-rank">Hoàn thành (2024)</span>
+                  <span class="cert-action"><i class="fa-regular fa-eye"></i> Xem gốc</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 5. Chuyển Đổi Số & Bài Giảng E-Learning -->
+            <div class="cert-item-card" onclick="openCertModal('Chứng Nhận Chuyển Đổi Số Trong Giáo Dục & E-Learning', '0841fa33-46e2-441b-9dce-2d99624b5ae6.jpeg', 'Khóa đào tạo Chuyển đổi số trong GD và Xây dựng bài giảng điện tử E-Learning - Vietnam Online Academy (25/09/2023).')">
+              <div class="cert-icon"><i class="fa-solid fa-laptop-code"></i></div>
+              <div class="cert-content">
+                <div class="cert-name">Chuyển Đổi Số & Bài Giảng E-Learning</div>
+                <div class="cert-issuer">Vietnam Online Academy</div>
+                <div class="cert-footer-row">
+                  <span class="cert-rank">Chương trình QG</span>
+                  <span class="cert-action"><i class="fa-regular fa-eye"></i> Xem gốc</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 6. Tiếng Anh Pearson Versant B1 -->
+            <div class="cert-item-card" onclick="openCertModal('Chứng Chỉ Tiếng Anh Quốc Tế Versant Pearson (B1 CEFR)', '2fb0e02b-ff4e-46ce-b568-aad4f68f3c6d.jpeg', 'Pearson Versant English Placement Test (24/05/2025). Score: 46 - CEFR B1. Đọc: 68, Nghe: 48, Viết: 42.')">
+              <div class="cert-icon"><i class="fa-solid fa-language"></i></div>
+              <div class="cert-content">
+                <div class="cert-name">Tiếng Anh Pearson Versant (B1)</div>
+                <div class="cert-issuer">Pearson Education (Quốc tế)</div>
+                <div class="cert-footer-row">
+                  <span class="cert-rank">CEFR B1 (2025)</span>
+                  <span class="cert-action"><i class="fa-regular fa-eye"></i> Xem gốc</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 7. Chuẩn Đầu Ra CNTT Đại Học -->
+            <div class="cert-item-card" onclick="openCertModal('Chứng Nhận Chuẩn Đầu Ra CNTT Trình Độ Đại Học', '56979ae0-0b90-4c26-9cc9-84da485531de.jpeg', 'Trường ĐH Sư Phạm Kỹ Thuật Nam Định cấp ngày 27/05/2024. Đạt chuẩn đầu ra trình độ ĐH về Ứng dụng CNTT (Trắc nghiệm 8.88, Thực hành 6.70).')">
+              <div class="cert-icon"><i class="fa-solid fa-desktop"></i></div>
+              <div class="cert-content">
+                <div class="cert-name">Chuẩn CNTT Trình Độ Đại Học</div>
+                <div class="cert-issuer">ĐH SPKT Nam Định (2024)</div>
+                <div class="cert-footer-row">
+                  <span class="cert-rank">Đạt chuẩn ĐH</span>
+                  <span class="cert-action"><i class="fa-regular fa-eye"></i> Xem gốc</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 8. Bằng CĐ Nghề Hà Nam -->
+            <div class="cert-item-card" onclick="openCertModal('Bằng Tốt Nghiệp Cao Đẳng Kỹ Sư Thực Hành', '4b33cc38-3db0-45eb-8aec-fe5e4e10fb04.jpeg', 'Trường Cao Đẳng Nghề Hà Nam cấp ngày 26/04/2023. Công nhận danh hiệu Kỹ sư thực hành Công nghệ Ô tô.')">
+              <div class="cert-icon"><i class="fa-solid fa-car"></i></div>
+              <div class="cert-content">
+                <div class="cert-name">Bằng Kỹ Sư Thực Hành Ô Tô</div>
+                <div class="cert-issuer">Trường CĐ Nghề Hà Nam</div>
+                <div class="cert-footer-row">
+                  <span class="cert-rank">Chính quy (2023)</span>
+                  <span class="cert-action"><i class="fa-regular fa-eye"></i> Xem gốc</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 9. Chứng Chỉ GDQP & An Ninh -->
+            <div class="cert-item-card" onclick="openCertModal('Chứng Chỉ Giáo Dục Quốc Phòng & An Ninh', '335cb62c-bc17-4827-a67a-0b9e693fdcb9.jpeg', 'Chứng chỉ hoàn thành môn học Giáo dục Quốc phòng & An ninh cấp ngày 17/06/2024. Xếp loại: GIỎI.')">
+              <div class="cert-icon"><i class="fa-solid fa-shield-halved"></i></div>
+              <div class="cert-content">
+                <div class="cert-name">Giáo Dục Quốc Phòng & An Ninh</div>
+                <div class="cert-issuer">Trung Tâm GDQP & AN (2024)</div>
+                <div class="cert-footer-row">
+                  <span class="cert-rank" style="color: var(--success);">Xếp loại: Giỏi</span>
+                  <span class="cert-action"><i class="fa-regular fa-eye"></i> Xem gốc</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+
+    <!-- CV Footer Note -->
+    <footer class="cv-foot">
+      Hồ sơ năng lực điện tử chuẩn hóa của ứng viên <strong>Lý Xuân Tiến</strong> • Xác thực 100% qua hệ thống chứng chỉ & văn bằng gốc
+    </footer>
+
+  </main>
+
+  <!-- Interactive Lightbox Modal with Zoom & Rotate -->
+  <div class="modal-overlay" id="certModal" onclick="closeCertModal(event)">
+    <div class="modal-dialog" onclick="event.stopPropagation()">
+      <div class="modal-top">
+        <h3 class="modal-heading" id="modalTitle">Văn bằng / Chứng chỉ gốc</h3>
+        <div class="modal-top-actions">
+          <button class="modal-icon-btn" onclick="rotateImage()" title="Xoay ảnh 90 độ">
+            <i class="fa-solid fa-rotate-right"></i>
+            <span>Xoay ảnh</span>
+          </button>
+          <button class="modal-close-btn" onclick="closeCertModal()" title="Đóng">&times;</button>
+        </div>
+      </div>
+      <div class="modal-view">
+        <img src="" alt="Chứng chỉ" id="modalImg" class="modal-img-element" />
+      </div>
+      <div class="modal-bottom">
+        <span id="modalDesc">Mô tả văn bản chứng thực</span>
+        <button class="btn btn-primary" onclick="closeCertModal()" style="padding: 4px 14px; font-size: 0.8rem;">Đóng</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let currentRotation = 0;
+
+    // Theme Switcher
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', newTheme);
+      
+      const icon = document.querySelector('#themeToggle i');
+      if (newTheme === 'dark') {
+        icon.className = 'fa-solid fa-sun';
+      } else {
+        icon.className = 'fa-solid fa-moon';
+      }
+      localStorage.setItem('cv_theme_pref', newTheme);
+    }
+
+    // Load saved theme
+    (function() {
+      const savedTheme = localStorage.getItem('cv_theme_pref');
+      if (savedTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        const icon = document.querySelector('#themeToggle i');
+        if (icon) icon.className = 'fa-solid fa-sun';
+      }
+    })();
+
+    // Modal controls
+    function openCertModal(title, imgSrc, desc) {
+      currentRotation = 0;
+      const img = document.getElementById('modalImg');
+      img.style.transform = `rotate(0deg)`;
+      img.src = imgSrc;
+      document.getElementById('modalTitle').textContent = title;
+      document.getElementById('modalDesc').textContent = desc;
+      document.getElementById('certModal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function rotateImage() {
+      currentRotation = (currentRotation + 90) % 360;
+      const img = document.getElementById('modalImg');
+      img.style.transform = `rotate(${currentRotation}deg)`;
+    }
+
+    function closeCertModal(e) {
+      if (e && e.target !== e.currentTarget && !e.target.classList.contains('modal-close-btn')) return;
+      document.getElementById('certModal').classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Keyboard support
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeCertModal();
+      }
+    });
+  </script>
+</body>
+</html>
