@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CV Lý Xuân Tiến - Kỹ Sư Công Nghệ Kỹ Thuật Ô Tô & Giảng Viên</title>
-  <meta name="description" content="Hồ sơ năng lực chuẩn hóa của Lý Xuân Tiến - Kỹ sư Công nghệ Kỹ thuật Ô tô, Giảng viên chuyên ngành Ô tô & Ủy viên Ban Thường vụ Đoàn trường." />
+  <title>CV Lý Xuân Tiến - Kỹ Sư Công Nghệ Kỹ Thuật Ô Tô & Cơ Điện (SMT / Đồ Gá Jig)</title>
+  <meta name="description" content="Hồ sơ năng lực của Lý Xuân Tiến - Kỹ sư Công nghệ Kỹ thuật Ô tô & Cơ điện, chuyên môn về Dây chuyền SMT, Thiết kế & Cải tiến Đồ gá (Jig / Fixture), Bảo dưỡng Cơ điện." />
 
   <!-- Google Fonts & Font Awesome Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,14 +26,14 @@
       --text-main: #0f172a;
       --text-muted: #334155;
       --text-subtle: #64748b;
-      --bg-body: #f8fafc;
+      --bg-body: #e2e8f0;
       --bg-card: #ffffff;
-      --bg-alt: #f1f5f9;
+      --bg-alt: #f8fafc;
       --border-color: #e2e8f0;
-      --border-subtle: #f1f5f9;
+      --border-subtle: #cbd5e1;
       --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
       --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
-      --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+      --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
       --radius-sm: 6px;
       --radius-md: 10px;
       --radius-lg: 14px;
@@ -74,7 +74,7 @@
       font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       background-color: var(--bg-body);
       color: var(--text-main);
-      line-height: 1.6;
+      line-height: 1.5;
       padding: 24px 16px 40px;
       -webkit-font-smoothing: antialiased;
       transition: background-color 0.3s ease, color 0.3s ease;
@@ -82,40 +82,13 @@
 
     /* Top Action Bar */
     .top-action-bar {
-      max-width: 1040px;
-      margin: 0 auto 18px auto;
+      max-width: 1020px;
+      margin: 0 auto 16px auto;
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end;
       align-items: center;
       flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .verification-status {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--success-subtle);
-      color: var(--success);
-      border: 1px solid rgba(22, 163, 74, 0.25);
-      padding: 6px 14px;
-      border-radius: var(--radius-full);
-      font-size: 0.85rem;
-      font-weight: 600;
-    }
-
-    .status-dot {
-      width: 8px;
-      height: 8px;
-      background-color: var(--success);
-      border-radius: 50%;
-      box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.25);
-      animation: pulseDot 2s infinite;
-    }
-
-    @keyframes pulseDot {
-      0%, 100% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.3); opacity: 0.6; }
+      gap: 10px;
     }
 
     .action-btns {
@@ -161,7 +134,7 @@
 
     /* CV Document Paper */
     .cv-document {
-      max-width: 1040px;
+      max-width: 1020px;
       margin: 0 auto;
       background: var(--bg-card);
       border-radius: var(--radius-lg);
@@ -174,7 +147,7 @@
     .cv-header {
       background: linear-gradient(135deg, #0a192f 0%, #0f4c81 60%, #1e3a8a 100%);
       color: #ffffff;
-      padding: 38px 44px;
+      padding: 32px 38px;
       position: relative;
     }
 
@@ -191,7 +164,7 @@
     .header-content {
       display: flex;
       align-items: center;
-      gap: 32px;
+      gap: 28px;
       position: relative;
       z-index: 2;
     }
@@ -202,13 +175,13 @@
     }
 
     .avatar-img {
-      width: 145px;
-      height: 145px;
+      width: 135px;
+      height: 135px;
       border-radius: 50%;
       object-fit: cover;
       object-position: center 15%;
       border: 3.5px solid #ffffff;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
       background-color: #cbd5e1;
       display: block;
     }
@@ -219,14 +192,14 @@
       right: 4px;
       background: #2563eb;
       color: #ffffff;
-      width: 28px;
-      height: 28px;
+      width: 26px;
+      height: 26px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.8rem;
-      border: 2.5px solid #0a192f;
+      font-size: 0.75rem;
+      border: 2px solid #0a192f;
     }
 
     .header-details {
@@ -234,11 +207,11 @@
     }
 
     .candidate-name {
-      font-size: 2.2rem;
+      font-size: 2.1rem;
       font-weight: 800;
       letter-spacing: -0.02em;
       text-transform: uppercase;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
       color: #ffffff;
     }
 
@@ -247,21 +220,21 @@
       align-items: center;
       gap: 8px;
       flex-wrap: wrap;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
 
     .role-badge {
       background: rgba(255, 255, 255, 0.15);
       backdrop-filter: blur(4px);
       border: 1px solid rgba(255, 255, 255, 0.25);
-      padding: 4px 12px;
+      padding: 3px 10px;
       border-radius: var(--radius-full);
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 600;
       color: #f1f5f9;
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
     }
 
     .role-badge.primary-role {
@@ -272,17 +245,17 @@
 
     .contact-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 8px 18px;
-      padding-top: 14px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 6px 16px;
+      padding-top: 12px;
       border-top: 1px solid rgba(255, 255, 255, 0.15);
     }
 
     .contact-link {
       display: flex;
       align-items: center;
-      gap: 10px;
-      font-size: 0.88rem;
+      gap: 8px;
+      font-size: 0.85rem;
       color: #e2e8f0;
       text-decoration: none;
       transition: var(--transition);
@@ -300,41 +273,44 @@
 
     /* CV Layout 2 Columns */
     .cv-grid {
-      display: grid;
-      grid-template-columns: 330px 1fr;
+      display: flex;
+      flex-direction: row;
     }
 
     /* Left Sidebar */
     .cv-aside {
+      width: 325px;
+      flex-shrink: 0;
       background-color: var(--bg-alt);
       border-right: 1px solid var(--border-color);
-      padding: 32px 24px;
+      padding: 26px 20px;
       display: flex;
       flex-direction: column;
-      gap: 30px;
+      gap: 22px;
     }
 
     /* Right Main */
     .cv-section-main {
-      padding: 32px 36px;
+      flex: 1;
+      padding: 26px 28px;
       display: flex;
       flex-direction: column;
-      gap: 32px;
+      gap: 22px;
     }
 
     /* Section Headings */
     .sec-heading {
-      font-size: 1.08rem;
+      font-size: 1rem;
       font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.04em;
       color: var(--text-main);
-      margin-bottom: 18px;
-      padding-bottom: 8px;
+      margin-bottom: 12px;
+      padding-bottom: 6px;
       border-bottom: 2px solid var(--border-color);
       display: flex;
       align-items: center;
-      gap: 9px;
+      gap: 8px;
       position: relative;
     }
 
@@ -343,36 +319,40 @@
       position: absolute;
       bottom: -2px;
       left: 0;
-      width: 42px;
+      width: 36px;
       height: 2px;
       background: var(--primary);
     }
 
     .sec-heading i {
       color: var(--primary);
-      font-size: 1.05rem;
+      font-size: 0.95rem;
     }
 
     /* Profile / Summary Callout */
     .profile-card {
       background: var(--primary-subtle);
-      border-left: 4px solid var(--primary);
-      padding: 16px 18px;
+      border-left: 3.5px solid var(--primary);
+      padding: 12px 14px;
       border-radius: 0 var(--radius-md) var(--radius-md) 0;
-      font-size: 0.925rem;
+      font-size: 0.88rem;
       color: var(--text-main);
-      line-height: 1.65;
+      line-height: 1.55;
     }
 
-    /* Education Card */
+    /* Card Block */
     .card-block {
       background: var(--bg-card);
       border: 1px solid var(--border-color);
       border-radius: var(--radius-md);
-      padding: 14px 16px;
-      margin-bottom: 14px;
+      padding: 11px 13px;
+      margin-bottom: 11px;
       box-shadow: var(--shadow-sm);
       transition: var(--transition);
+    }
+
+    .card-block:last-child {
+      margin-bottom: 0;
     }
 
     .card-block:hover {
@@ -381,70 +361,74 @@
     }
 
     .card-title {
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       font-weight: 700;
       color: var(--text-main);
-      margin-bottom: 3px;
+      margin-bottom: 2px;
     }
 
     .card-sub {
-      font-size: 0.875rem;
+      font-size: 0.825rem;
       font-weight: 600;
       color: var(--primary);
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
     .card-meta {
       display: flex;
       align-items: center;
-      gap: 8px;
-      font-size: 0.8rem;
+      gap: 6px;
+      font-size: 0.775rem;
       color: var(--text-subtle);
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
 
     .card-desc {
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       color: var(--text-muted);
-      line-height: 1.5;
-      padding-top: 6px;
+      line-height: 1.45;
+      padding-top: 5px;
       border-top: 1px dashed var(--border-color);
     }
 
     /* Skill Grouping */
     .skill-group {
-      margin-bottom: 18px;
+      margin-bottom: 14px;
+    }
+
+    .skill-group:last-child {
+      margin-bottom: 0;
     }
 
     .skill-group-title {
-      font-size: 0.825rem;
+      font-size: 0.78rem;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.03em;
       color: var(--text-subtle);
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
     }
 
     .tag-cloud {
       display: flex;
       flex-wrap: wrap;
-      gap: 7px;
+      gap: 6px;
     }
 
     .tag {
       background: var(--bg-card);
       border: 1px solid var(--border-color);
       color: var(--text-main);
-      padding: 5px 10px;
+      padding: 4px 8px;
       border-radius: var(--radius-sm);
-      font-size: 0.825rem;
+      font-size: 0.775rem;
       font-weight: 500;
       display: inline-flex;
       align-items: center;
-      gap: 5px;
+      gap: 4px;
       transition: var(--transition);
     }
 
@@ -464,22 +448,22 @@
     /* Timeline Section */
     .exp-timeline {
       position: relative;
-      padding-left: 22px;
+      padding-left: 18px;
     }
 
     .exp-timeline::before {
       content: "";
       position: absolute;
-      left: 6px;
-      top: 6px;
-      bottom: 6px;
+      left: 5px;
+      top: 5px;
+      bottom: 5px;
       width: 2px;
       background: var(--border-color);
     }
 
     .timeline-node {
       position: relative;
-      margin-bottom: 24px;
+      margin-bottom: 18px;
     }
 
     .timeline-node:last-child {
@@ -488,14 +472,14 @@
 
     .node-marker {
       position: absolute;
-      left: -22px;
-      top: 5px;
-      width: 14px;
-      height: 14px;
+      left: -18px;
+      top: 4px;
+      width: 12px;
+      height: 12px;
       border-radius: 50%;
       background: var(--bg-card);
-      border: 3px solid var(--primary);
-      box-shadow: 0 0 0 3px var(--primary-subtle);
+      border: 2.5px solid var(--primary);
+      box-shadow: 0 0 0 2.5px var(--primary-subtle);
     }
 
     .node-header {
@@ -504,32 +488,32 @@
       align-items: baseline;
       flex-wrap: wrap;
       gap: 4px;
-      margin-bottom: 3px;
+      margin-bottom: 2px;
     }
 
     .node-title {
-      font-size: 1.02rem;
+      font-size: 0.95rem;
       font-weight: 700;
       color: var(--text-main);
     }
 
     .node-badge {
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       font-weight: 600;
       color: var(--primary);
       background: var(--primary-subtle);
-      padding: 2px 8px;
+      padding: 1px 7px;
       border-radius: var(--radius-full);
       display: inline-flex;
       align-items: center;
-      gap: 4px;
+      gap: 3px;
     }
 
     .node-company {
-      font-size: 0.9rem;
+      font-size: 0.84rem;
       font-weight: 600;
       color: var(--text-muted);
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
 
     .bullet-points {
@@ -539,11 +523,11 @@
 
     .bullet-points li {
       position: relative;
-      padding-left: 16px;
-      margin-bottom: 6px;
-      font-size: 0.9rem;
+      padding-left: 14px;
+      margin-bottom: 5px;
+      font-size: 0.835rem;
       color: var(--text-muted);
-      line-height: 1.55;
+      line-height: 1.48;
     }
 
     .bullet-points li::before {
@@ -552,25 +536,32 @@
       left: 0;
       color: var(--primary-light);
       font-weight: bold;
-      font-size: 1rem;
+      font-size: 0.95rem;
     }
 
     .bullet-points li strong {
       color: var(--text-main);
     }
 
-    /* Verification / Certificate Grid */
+    /* Verification / Certificate Grid Section (Page 2) */
+    .cert-section-wrapper {
+      padding: 24px 28px 28px;
+      border-top: 2px solid var(--border-color);
+      background-color: var(--bg-card);
+    }
+
     .cert-list-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 12px;
+      margin-top: 12px;
     }
 
     .cert-item-card {
       background: var(--bg-card);
       border: 1px solid var(--border-color);
       border-radius: var(--radius-md);
-      padding: 12px 14px;
+      padding: 10px 12px;
       display: flex;
       align-items: flex-start;
       gap: 10px;
@@ -586,41 +577,48 @@
     }
 
     .cert-icon {
-      width: 38px;
-      height: 38px;
+      width: 34px;
+      height: 34px;
       border-radius: var(--radius-sm);
       background: var(--primary-subtle);
       color: var(--primary);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.1rem;
+      font-size: 1rem;
       flex-shrink: 0;
     }
 
     .cert-content {
       flex: 1;
+      min-width: 0;
     }
 
     .cert-name {
-      font-size: 0.88rem;
+      font-size: 0.825rem;
       font-weight: 700;
       color: var(--text-main);
       line-height: 1.3;
-      margin-bottom: 3px;
+      margin-bottom: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .cert-issuer {
-      font-size: 0.775rem;
+      font-size: 0.72rem;
       color: var(--text-subtle);
-      margin-bottom: 4px;
+      margin-bottom: 3px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .cert-footer-row {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-size: 0.75rem;
+      font-size: 0.72rem;
     }
 
     .cert-rank {
@@ -759,8 +757,8 @@
 
     .cv-foot {
       text-align: center;
-      padding: 18px;
-      font-size: 0.825rem;
+      padding: 14px;
+      font-size: 0.8rem;
       color: var(--text-subtle);
       border-top: 1px solid var(--border-color);
       background-color: var(--bg-alt);
@@ -769,23 +767,27 @@
     /* Responsive */
     @media (max-width: 880px) {
       .cv-grid {
-        grid-template-columns: 1fr;
+        flex-direction: column;
       }
       .cv-aside {
+        width: 100%;
         border-right: none;
         border-bottom: 1px solid var(--border-color);
-        padding: 24px 20px;
+        padding: 20px;
       }
       .cv-section-main {
-        padding: 24px 20px;
+        padding: 20px;
+      }
+      .cert-list-grid {
+        grid-template-columns: 1fr;
       }
       .cv-header {
-        padding: 28px 20px;
+        padding: 24px 20px;
       }
       .header-content {
         flex-direction: column;
         text-align: center;
-        gap: 18px;
+        gap: 16px;
       }
       .candidate-roles {
         justify-content: center;
@@ -796,18 +798,27 @@
       }
     }
 
-    /* PRINT / PDF STYLES */
+    /* ==============================================
+       DEDICATED 2-PAGE PRINT / PDF EXPORT ENGINE
+       ============================================== */
     @media print {
       @page {
         size: A4 portrait;
-        margin: 8mm 10mm;
+        margin: 6mm 8mm;
       }
 
-      body {
+      *, *::before, *::after {
+        box-shadow: none !important;
+        text-shadow: none !important;
+      }
+
+      html, body {
         background: #ffffff !important;
-        color: #000000 !important;
+        color: #0f172a !important;
         padding: 0 !important;
-        font-size: 10pt !important;
+        margin: 0 !important;
+        font-size: 8.75pt !important;
+        line-height: 1.38 !important;
       }
 
       .top-action-bar,
@@ -817,10 +828,19 @@
       }
 
       .cv-document {
-        box-shadow: none !important;
         border: none !important;
-        max-width: 100% !important;
         border-radius: 0 !important;
+        max-width: 100% !important;
+        box-shadow: none !important;
+      }
+
+      /* PAGE 1: HEADER + 2-COLUMN MAIN INFO */
+      .page-1-wrapper {
+        page-break-after: always;
+        break-after: page;
+        min-height: 275mm;
+        display: flex;
+        flex-direction: column;
       }
 
       .cv-header {
@@ -828,27 +848,179 @@
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
         color: #ffffff !important;
-        padding: 20px 24px !important;
+        padding: 16px 20px !important;
+        border-radius: 4px;
+        margin-bottom: 8px;
+      }
+
+      .candidate-name {
+        color: #ffffff !important;
+        font-size: 1.7rem !important;
+      }
+
+      .avatar-img {
+        width: 105px !important;
+        height: 105px !important;
+        border-width: 2.5px !important;
+      }
+
+      .role-badge {
+        font-size: 0.72rem !important;
+        padding: 2px 7px !important;
+      }
+
+      .role-badge.primary-role {
+        background: #1d4ed8 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      .contact-link {
+        font-size: 0.775rem !important;
+        color: #ffffff !important;
+      }
+
+      .contact-link i {
+        color: #93c5fd !important;
       }
 
       .cv-grid {
-        grid-template-columns: 280px 1fr !important;
+        display: flex !important;
+        flex-direction: row !important;
+        flex: 1;
+        gap: 12px;
       }
 
       .cv-aside {
+        width: 250px !important;
         background: #f8fafc !important;
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
-        padding: 20px 16px !important;
+        padding: 12px 14px !important;
+        border: 1px solid #e2e8f0 !important;
+        border-radius: 4px;
+        gap: 12px !important;
       }
 
       .cv-section-main {
-        padding: 20px 20px !important;
+        flex: 1 !important;
+        padding: 12px 14px !important;
+        border: 1px solid #e2e8f0 !important;
+        border-radius: 4px;
+        gap: 12px !important;
       }
 
-      .timeline-node, .card-block, .cert-item-card {
-        page-break-inside: avoid;
-        break-inside: avoid;
+      .sec-heading {
+        font-size: 0.85rem !important;
+        margin-bottom: 8px !important;
+        padding-bottom: 4px !important;
+      }
+
+      .profile-card {
+        padding: 8px 10px !important;
+        font-size: 0.8rem !important;
+        background: #eff6ff !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      .card-block {
+        padding: 8px 10px !important;
+        margin-bottom: 8px !important;
+        border: 1px solid #cbd5e1 !important;
+      }
+
+      .card-title {
+        font-size: 0.825rem !important;
+      }
+
+      .card-sub {
+        font-size: 0.775rem !important;
+      }
+
+      .card-desc {
+        font-size: 0.75rem !important;
+      }
+
+      .tag {
+        font-size: 0.7rem !important;
+        padding: 2px 6px !important;
+        border: 1px solid #cbd5e1 !important;
+      }
+
+      .tag.highlight {
+        background: #eff6ff !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      .timeline-node {
+        margin-bottom: 10px !important;
+      }
+
+      .node-title {
+        font-size: 0.85rem !important;
+      }
+
+      .node-badge {
+        font-size: 0.7rem !important;
+        background: #eff6ff !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      .bullet-points li {
+        font-size: 0.775rem !important;
+        margin-bottom: 3px !important;
+        line-height: 1.4 !important;
+      }
+
+      /* PAGE 2: CERTIFICATES & RECOGNITION */
+      .page-2-wrapper {
+        page-break-before: always;
+        break-before: page;
+        min-height: 275mm;
+        padding: 12px 14px !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .cert-section-wrapper {
+        border-top: none !important;
+        padding: 0 !important;
+      }
+
+      .cert-list-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 8px !important;
+      }
+
+      .cert-item-card {
+        padding: 8px 10px !important;
+        border: 1px solid #cbd5e1 !important;
+        background: #ffffff !important;
+      }
+
+      .cert-name {
+        font-size: 0.775rem !important;
+      }
+
+      .cert-issuer {
+        font-size: 0.68rem !important;
+      }
+
+      .cert-rank {
+        font-size: 0.68rem !important;
+      }
+
+      .cv-foot {
+        margin-top: auto;
+        padding: 8px !important;
+        font-size: 0.75rem !important;
+        background: #f8fafc !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
       }
     }
   </style>
@@ -856,13 +1028,13 @@
 <body>
 
   <!-- Top Action Bar (Print / PDF / Theme Switcher) -->
-  <div class="top-action-bar" style="justify-content: flex-end;">
+  <div class="top-action-bar">
     <div class="action-btns">
       <button class="btn" id="themeToggle" onclick="toggleTheme()" title="Chuyển chế độ Sáng / Tối">
         <i class="fa-solid fa-moon"></i>
         <span>Giao diện</span>
       </button>
-      <button class="btn btn-primary" onclick="window.print()" title="Lưu thành file PDF tiêu chuẩn hoặc In ấn">
+      <button class="btn btn-primary" onclick="window.print()" title="Lưu thành file PDF tiêu chuẩn 2 trang hoàn hảo">
         <i class="fa-solid fa-print"></i>
         <span>Xuất PDF / In CV</span>
       </button>
@@ -872,373 +1044,396 @@
   <!-- Main CV Container -->
   <main class="cv-document">
     
-    <!-- Profile Header -->
-    <header class="cv-header">
-      <div class="header-content">
-        <div class="avatar-box">
-          <img src="Screenshot 2026-08-14 at 13.39.01.png" alt="Ảnh chân dung Lý Xuân Tiến" class="avatar-img" />
-          <div class="verified-icon" title="Hồ sơ văn bằng chính quy đã xác thực">
-            <i class="fa-solid fa-check"></i>
-          </div>
-        </div>
-
-        <div class="header-details">
-          <h1 class="candidate-name">LÝ XUÂN TIẾN</h1>
-          
-          <div class="candidate-roles">
-            <span class="role-badge primary-role"><i class="fa-solid fa-car-side"></i> Kỹ Sư Công Nghệ Kỹ Thuật Ô Tô</span>
-            <span class="role-badge"><i class="fa-solid fa-chalkboard-user"></i> Giảng Viên Nghề Ô Tô</span>
-            <span class="role-badge"><i class="fa-solid fa-users"></i> UV BTV Đoàn Trường</span>
-          </div>
-
-          <div class="contact-grid">
-            <a href="tel:0394329121" class="contact-link">
-              <i class="fa-solid fa-phone"></i>
-              <span><strong>0394 329 121</strong></span>
-            </a>
-            <a href="mailto:tienly804@gmail.com" class="contact-link">
-              <i class="fa-solid fa-envelope"></i>
-              <span>tienly804@gmail.com</span>
-            </a>
-            <div class="contact-link">
-              <i class="fa-solid fa-location-dot"></i>
-              <span>Tam Chúc, Ninh Bình (Gốc: Hà Nam)</span>
-            </div>
-            <div class="contact-link">
-              <i class="fa-solid fa-calendar-day"></i>
-              <span>19/04/2003</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- 2 Column Body -->
-    <div class="cv-grid">
+    <!-- PAGE 1 CONTENT -->
+    <div class="page-1-wrapper">
       
-      <!-- Left Column -->
-      <aside class="cv-aside">
-        
-        <!-- Mục tiêu nghề nghiệp -->
-        <div>
-          <h2 class="sec-heading">
-            <i class="fa-solid fa-bullseye"></i> Mục Tiêu
-          </h2>
-          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
-            Phát huy nền tảng <strong>Kỹ sư Công nghệ Kỹ thuật Ô tô</strong>, chứng chỉ <strong>Nghiệp vụ Sư phạm Dạy nghề</strong> và kỹ năng thực tế tại xưởng; cống hiến vào công tác giảng dạy, đào tạo nguồn nhân lực kỹ thuật chất lượng cao, đồng thời sẵn sàng đảm nhận vai trò quản lý kỹ thuật và chuyển giao công nghệ mới.
-          </p>
-        </div>
-
-        <!-- Học vấn & Bằng cấp -->
-        <div>
-          <h2 class="sec-heading">
-            <i class="fa-solid fa-graduation-cap"></i> Học Vấn
-          </h2>
-
-          <!-- Bằng Đại học -->
-          <div class="card-block">
-            <div class="card-title">Bằng Kỹ Sư Công Nghệ KT Ô Tô</div>
-            <div class="card-sub">ĐH Sư Phạm Kỹ Thuật Nam Định</div>
-            <div class="card-meta">
-              <span><i class="fa-regular fa-calendar"></i> 2021 – 2025</span>
-              <span>•</span>
-              <span style="color: var(--success); font-weight: 600;">Tốt nghiệp: Loại Khá</span>
-            </div>
-            <div class="card-desc">
-              <strong>Đề tài tốt nghiệp:</strong> Nghiên cứu, thiết kế & chế tạo mô hình hệ thống phun xăng điện tử (EFI) phục vụ đào tạo thực nghiệm trực quan.
+      <!-- Profile Header -->
+      <header class="cv-header">
+        <div class="header-content">
+          <div class="avatar-box">
+            <img src="Screenshot 2026-08-14 at 13.39.01.png" alt="Ảnh chân dung Lý Xuân Tiến" class="avatar-img" />
+            <div class="verified-icon" title="Hồ sơ văn bằng chính quy đã xác thực">
+              <i class="fa-solid fa-check"></i>
             </div>
           </div>
 
-          <!-- Bằng Cao đẳng -->
-          <div class="card-block">
-            <div class="card-title">Kỹ Sư Thực Hành Ô Tô</div>
-            <div class="card-sub">Trường Cao Đẳng Nghề Hà Nam</div>
-            <div class="card-meta">
-              <span><i class="fa-regular fa-calendar"></i> 2021 – 2023</span>
-              <span>•</span>
-              <span>Chính quy</span>
-            </div>
-            <div class="card-desc">
-              Trang bị tay nghề thực tế vững vàng về quy trình đại tu động cơ, khung gầm, hệ thống truyền lực và hệ thống phanh - lái.
-            </div>
-          </div>
-        </div>
-
-        <!-- Kỹ năng chuyên môn -->
-        <div>
-          <h2 class="sec-heading">
-            <i class="fa-solid fa-gears"></i> Kỹ Năng Cốt Lõi
-          </h2>
-
-          <!-- Chuyên môn ô tô -->
-          <div class="skill-group">
-            <div class="skill-group-title">
-              <i class="fa-solid fa-wrench"></i> Kỹ Thuật Ô Tô
-            </div>
-            <div class="tag-cloud">
-              <span class="tag highlight">Động cơ Đốt trong</span>
-              <span class="tag highlight">Phun xăng Điện tử EFI</span>
-              <span class="tag highlight">Hệ thống Khung gầm</span>
-              <span class="tag">Chẩn đoán Mã lỗi OBD-II</span>
-              <span class="tag">Hệ thống Điện - Điện tử Ô tô</span>
-              <span class="tag">Bảo dưỡng Cấp định kỳ</span>
-              <span class="tag">Cân chỉnh Góc đặt bánh xe</span>
-            </div>
-          </div>
-
-          <!-- Sư phạm & Quản trị -->
-          <div class="skill-group">
-            <div class="skill-group-title">
-              <i class="fa-solid fa-chalkboard-user"></i> Sư Phạm & Quản Lý Xưởng
-            </div>
-            <div class="tag-cloud">
-              <span class="tag highlight">Giảng dạy Tích hợp</span>
-              <span class="tag highlight">Bài giảng E-Learning</span>
-              <span class="tag">Văn hóa Xưởng 5S</span>
-              <span class="tag">An toàn Lao động Ô tô</span>
-              <span class="tag">Công tác Chủ nhiệm & Quản lý lớp</span>
-            </div>
-          </div>
-
-          <!-- Ngoại ngữ & Tin học -->
-          <div class="skill-group">
-            <div class="skill-group-title">
-              <i class="fa-solid fa-globe"></i> Ngoại Ngữ & Tin Học
-            </div>
-            <div class="tag-cloud">
-              <span class="tag highlight">Tiếng Anh B1 (Versant Pearson)</span>
-              <span class="tag">Chuẩn CNTT Trình độ ĐH</span>
-              <span class="tag">Phần mềm Tra cứu Sơ đồ Mạch</span>
-            </div>
-          </div>
-        </div>
-
-      </aside>
-
-      <!-- Right Main Column -->
-      <section class="cv-section-main">
-        
-        <!-- Tóm tắt hồ sơ năng lực -->
-        <div class="profile-card">
-          <i class="fa-solid fa-shield-halved" style="color: var(--primary); margin-right: 6px;"></i>
-          <strong>TỔNG QUAN NĂNG LỰC:</strong> Ứng viên có sự kết hợp hoàn hảo giữa <strong>nền tảng Kỹ sư chuyên môn bài bản</strong>, <strong>nghiệp vụ Sư phạm Dạy nghề chính quy</strong>, <strong>kinh nghiệm sửa chữa thực tế tại xưởng/gara</strong> và <strong>năng lực lãnh đạo phong trào Đoàn thể</strong>. Tác phong công nghiệp chuẩn mực, kỹ năng truyền đạt lôi cuốn và khả năng làm việc độc lập cũng như theo nhóm hiệu quả.
-        </div>
-
-        <!-- Kinh nghiệm làm việc -->
-        <div>
-          <h2 class="sec-heading">
-            <i class="fa-solid fa-briefcase"></i> Kinh Nghiệm Làm Việc & Giảng Dạy
-          </h2>
-
-          <div class="exp-timeline">
+          <div class="header-details">
+            <h1 class="candidate-name">LÝ XUÂN TIẾN</h1>
             
-            <!-- Vị trí 1: Giáo viên Cao đẳng Nghề Hà Nam -->
-            <div class="timeline-node">
-              <div class="node-marker"></div>
-              <div class="node-header">
-                <h3 class="node-title">Giáo Viên Khoa Công Nghệ Ô Tô & UV Ban Thường Vụ Đoàn Trường</h3>
-                <span class="node-badge">08/2023 – Hiện tại</span>
-              </div>
-              <div class="node-company">Trường Cao Đẳng Nghề Hà Nam</div>
-              <ul class="bullet-points">
-                <li>
-                  <strong>Giảng dạy chuyên môn:</strong> Trực tiếp phụ trách giảng dạy lý thuyết và hướng dẫn thực hành chuyên sâu các học phần: <em>Kết cấu & Sửa chữa Động cơ đốt trong</em>, <em>Hệ thống Gầm - Truyền lực</em>, <em>Hệ thống Nhiên liệu và Đánh lửa điện tử</em>.
-                </li>
-                <li>
-                  <strong>Đào tạo tay nghề & Chẩn đoán:</strong> Hướng dẫn sinh viên thành thạo quy trình tháo lắp, kiểm tra thông số kỹ thuật, chẩn đoán sự cố bằng thiết bị quét lỗi chuyên dụng và khắc phục pan bệnh thực tế.
-                </li>
-                <li>
-                  <strong>Quản lý xưởng & Chuẩn hóa 5S:</strong> Triển khai nghiêm ngặt văn hóa 5S và quy tắc An toàn vệ sinh lao động trong toàn bộ khu vực xưởng thực hành công nghệ ô tô.
-                </li>
-                <li>
-                  <strong>Công tác Giáo viên Chủ nhiệm:</strong> Quản lý nền nếp học tập, đánh giá rèn luyện sinh viên, kết nối cơ hội thực tập và việc làm cho sinh viên tại các doanh nghiệp đối tác.
-                </li>
-                <li>
-                  <strong>Công tác Đoàn thanh niên:</strong> Với cương vị Ủy viên BTV Đoàn trường, chủ trì lập kế hoạch, phát động các phong trào thi đua học tập, hội thi tay nghề kỹ thuật; được <strong>BCH Thành Đoàn Phủ Lý trao tặng Giấy khen xuất sắc</strong>.
-                </li>
-              </ul>
+            <div class="candidate-roles">
+              <span class="role-badge primary-role"><i class="fa-solid fa-microchip"></i> Kỹ Sư Kỹ Thuật (SMT / Đồ Gá Jig)</span>
+              <span class="role-badge"><i class="fa-solid fa-car-side"></i> Kỹ Sư Công Nghệ Kỹ Thuật Ô Tô</span>
+              <span class="role-badge"><i class="fa-solid fa-screwdriver-wrench"></i> Cơ Khí & Cơ Điện</span>
             </div>
 
-            <!-- Vị trí 2: Kỹ thuật viên Gara Ô tô -->
-            <div class="timeline-node">
-              <div class="node-marker"></div>
-              <div class="node-header">
-                <h3 class="node-title">Kỹ Thuật Viên Sửa Chữa & Bảo Dưỡng Ô Tô</h3>
-                <span class="node-badge">Thực tế Xưởng</span>
+            <div class="contact-grid">
+              <a href="tel:0394329121" class="contact-link">
+                <i class="fa-solid fa-phone"></i>
+                <span><strong>0394 329 121</strong></span>
+              </a>
+              <a href="mailto:tienly804@gmail.com" class="contact-link">
+                <i class="fa-solid fa-envelope"></i>
+                <span>tienly804@gmail.com</span>
+              </a>
+              <div class="contact-link">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Tam Chúc, Ninh Bình (Gốc: Hà Nam)</span>
               </div>
-              <div class="node-company">Gara Ô Tô Tuấn Thành</div>
-              <ul class="bullet-points">
-                <li>
-                  <strong>Bảo dưỡng định kỳ:</strong> Thực hiện các cấp bảo dưỡng nhanh cho các dòng xe con và xe du lịch: thay dầu, lọc dầu, kiểm tra hệ thống phanh, xúc rửa kim phun, kiểm tra áp suất và cân chỉnh góc đặt bánh xe.
-                </li>
-                <li>
-                  <strong>Sửa chữa gầm - máy:</strong> Tiếp nhận và trực tiếp xử lý các lỗi kỹ thuật về hệ thống treo, thước lái, rotuyn, moay-ơ, đại tu phanh và hệ thống xả.
-                </li>
-                <li>
-                  <strong>Kiểm tra chẩn đoán:</strong> Sử dụng máy đo kiểm và chạy thử xe để phát hiện các âm thanh lạ, tiếng gõ động cơ và rò rỉ dầu nhớt.
-                </li>
-              </ul>
+              <div class="contact-link">
+                <i class="fa-solid fa-calendar-day"></i>
+                <span>19/04/2003</span>
+              </div>
             </div>
-
           </div>
         </div>
+      </header>
 
-        <!-- Dự án Nổi bật -->
-        <div>
-          <h2 class="sec-heading">
-            <i class="fa-solid fa-diagram-project"></i> Dự Án Nghiên Cứu & Đào Tạo
-          </h2>
-          <div class="card-block" style="border-left: 4px solid var(--primary);">
-            <div class="node-header">
-              <div class="card-title">Thiết Kế & Chế Tạo Mô Hình Hệ Thống Phun Xăng Điện Tử (EFI) Trực Quan</div>
-              <span class="node-badge">Công trình Nghiên cứu SPKT</span>
-            </div>
-            <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 6px; line-height: 1.6;">
-              • <strong>Giải pháp:</strong> Nghiên cứu và chế tạo thành công sa bàn mô hình hệ thống phun xăng điện tử với đầy đủ ECU điều khiển, cảm biến khí nạp, cảm biến trục khuỷu, cảm biến vị trí bướm ga và kim phun áp lực cao.<br/>
-              • <strong>Ứng dụng:</strong> Giúp học viên quan sát trực quan quy trình phối khí, thời điểm phun xăng, tạo lỗi giả lập để rèn luyện kỹ năng đọc mã lỗi chẩn đoán trên thiết bị OBD-II.
+      <!-- 2 Column Body -->
+      <div class="cv-grid">
+        
+        <!-- Left Column: Goals, Education, Skills -->
+        <aside class="cv-aside">
+          
+          <!-- Mục tiêu nghề nghiệp -->
+          <div>
+            <h2 class="sec-heading">
+              <i class="fa-solid fa-bullseye"></i> Mục Tiêu
+            </h2>
+            <p style="font-size: 0.835rem; color: var(--text-muted); line-height: 1.5;">
+              Ứng tuyển vị trí <strong>Kỹ sư Kỹ thuật (PE/ME) / Kỹ thuật SMT & Đồ gá</strong>. Phát huy nền tảng Kỹ sư Cơ khí - Ô tô, năng lực vận hành dây chuyền SMT, thiết kế & căn chỉnh đồ gá (Jig/Fixture) chính xác nhằm nâng cao năng suất và chất lượng sản phẩm nhà máy.
             </p>
           </div>
-        </div>
 
-        <!-- Văn Bằng, Chứng Chỉ & Khen Thưởng (Đính kèm ảnh minh chứng) -->
-        <div>
-          <h2 class="sec-heading">
-            <i class="fa-solid fa-award"></i> Văn Bằng, Chứng Chỉ & Khen Thưởng Xác Thực
-          </h2>
-          <p style="font-size: 0.825rem; color: var(--text-subtle); margin-bottom: 12px;">
-            <i class="fa-solid fa-circle-info"></i> Nhấp vào thẻ bất kỳ để xem trực tiếp ảnh chụp văn bằng / chứng chỉ gốc:
-          </p>
+          <!-- Học vấn & Bằng cấp -->
+          <div>
+            <h2 class="sec-heading">
+              <i class="fa-solid fa-graduation-cap"></i> Học Vấn
+            </h2>
 
-          <div class="cert-list-grid">
-            
-            <!-- 1. Bằng Kỹ Sư ĐH SPKT Nam Định -->
-            <div class="cert-item-card" onclick="openCertModal('Bằng Kỹ Sư Công Nghệ Kỹ Thuật Ô Tô', 'a68c50a8-720a-4b4a-ad54-dd13c8ffa014.jpeg', 'Trường ĐH Sư Phạm Kỹ Thuật Nam Định cấp ngày 30/06/2025. Hạng tốt nghiệp: KHÁ. Số hiệu: A 003251.')">
-              <div class="cert-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-              <div class="cert-content">
-                <div class="cert-name">Bằng Kỹ Sư Công Nghệ KT Ô Tô</div>
-                <div class="cert-issuer">ĐH Sư Phạm Kỹ Thuật Nam Định</div>
-                <div class="cert-footer-row">
-                  <span class="cert-rank">Hạng Khá (2025)</span>
-                  <span class="cert-action"><i class="fa-regular fa-eye"></i> Xem gốc</span>
-                </div>
+            <!-- Bằng Đại học -->
+            <div class="card-block">
+              <div class="card-title">Kỹ Sư Công Nghệ KT Ô Tô</div>
+              <div class="card-sub">ĐH Sư Phạm Kỹ Thuật Nam Định</div>
+              <div class="card-meta">
+                <span><i class="fa-regular fa-calendar"></i> 2021 – 2025</span>
+                <span>•</span>
+                <span style="color: var(--success); font-weight: 600;">Hạng: Khá</span>
+              </div>
+              <div class="card-desc">
+                <strong>Đề tài tốt nghiệp:</strong> Thiết kế chế tạo sa bàn & đồ gá mô hình hệ thống điều khiển điện tử (EFI) ứng dụng thực nghiệm cơ điện.
               </div>
             </div>
 
-            <!-- 2. Nghiệp Vụ Sư Phạm CĐ Cơ Điện HN -->
-            <div class="cert-item-card" onclick="openCertModal('Chứng Chỉ Nghiệp Vụ Sư Phạm Dạy Cao Đẳng, Trung Cấp', '72c8ae15-c576-4e4f-a770-b8c5c1a7f272.jpeg', 'Trường Cao Đẳng Cơ Điện Hà Nội cấp ngày 08/06/2023. Xếp loại: KHÁ. Chứng chỉ tiêu chuẩn giảng dạy nghề nghiệp.')">
-              <div class="cert-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
-              <div class="cert-content">
-                <div class="cert-name">Nghiệp Vụ Sư Phạm Dạy CĐ & TC</div>
-                <div class="cert-issuer">Trường CĐ Cơ Điện Hà Nội</div>
-                <div class="cert-footer-row">
-                  <span class="cert-rank">Xếp loại Khá (2023)</span>
-                  <span class="cert-action"><i class="fa-regular fa-eye"></i> Xem gốc</span>
-                </div>
+            <!-- Bằng Cao đẳng -->
+            <div class="card-block">
+              <div class="card-title">Kỹ Sư Thực Hành Cơ Khí - Ô Tô</div>
+              <div class="card-sub">Trường Cao Đẳng Nghề Hà Nam</div>
+              <div class="card-meta">
+                <span><i class="fa-regular fa-calendar"></i> 2021 – 2023</span>
+                <span>•</span>
+                <span>Chính quy</span>
+              </div>
+              <div class="card-desc">
+                Đào tạo chuyên sâu tay nghề cơ khí chính xác, đo kiểm dung sai, gá đặt phôi và lắp ráp cụm chi tiết cơ điện.
               </div>
             </div>
-
-            <!-- 3. Giấy Khen Thành Đoàn Phủ Lý -->
-            <div class="cert-item-card" onclick="openCertModal('Giấy Khen Thành Đoàn TP Phủ Lý', '283bfdb7-5099-4556-9307-81d6da9aabc2.jpeg', 'BCH Đoàn TNCS Hồ Chí Minh TP Phủ Lý trao tặng Lý Xuân Tiến - UV BTV Đoàn trường CĐ Nghề Hà Nam vì thành tích xuất sắc trong công tác Đoàn năm học 2024 - 2025.')">
-              <div class="cert-icon" style="color: #ea580c; background: #fff7ed;"><i class="fa-solid fa-medal"></i></div>
-              <div class="cert-content">
-                <div class="cert-name">Giấy Khen Thành Đoàn Phủ Lý</div>
-                <div class="cert-issuer">Thành Đoàn TP Phủ Lý (2025)</div>
-                <div class="cert-footer-row">
-                  <span class="cert-rank">Thành tích Xuất sắc</span>
-                  <span class="cert-action"><i class="fa-regular fa-eye"></i> Xem gốc</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- 4. Tiêu Chuẩn Chức Danh Nghề Nghiệp Viên Chức GDNN -->
-            <div class="cert-item-card" onclick="openCertModal('Chứng Nhận Chức Danh Nghề Nghiệp Viên Chức GDNN', 'cd5a997b-528c-4266-b324-4a39c34e2cf2.jpeg', 'Trường Cao Đẳng Cơ Điện Phú Thọ cấp ngày 22/04/2024. Bồi dưỡng theo tiêu chuẩn chức danh nghề nghiệp viên chức chuyên ngành GDNN.')">
-              <div class="cert-icon"><i class="fa-solid fa-certificate"></i></div>
-              <div class="cert-content">
-                <div class="cert-name">Chức Danh Nghề Nghiệp GV GDNN</div>
-                <div class="cert-issuer">Trường CĐ Cơ Điện Phú Thọ</div>
-                <div class="cert-footer-row">
-                  <span class="cert-rank">Hoàn thành (2024)</span>
-                  <span class="cert-action"><i class="fa-regular fa-eye"></i> Xem gốc</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- 5. Chuyển Đổi Số & Bài Giảng E-Learning -->
-            <div class="cert-item-card" onclick="openCertModal('Chứng Nhận Chuyển Đổi Số Trong Giáo Dục & E-Learning', '0841fa33-46e2-441b-9dce-2d99624b5ae6.jpeg', 'Khóa đào tạo Chuyển đổi số trong GD và Xây dựng bài giảng điện tử E-Learning - Vietnam Online Academy (25/09/2023).')">
-              <div class="cert-icon"><i class="fa-solid fa-laptop-code"></i></div>
-              <div class="cert-content">
-                <div class="cert-name">Chuyển Đổi Số & Bài Giảng E-Learning</div>
-                <div class="cert-issuer">Vietnam Online Academy</div>
-                <div class="cert-footer-row">
-                  <span class="cert-rank">Chương trình QG</span>
-                  <span class="cert-action"><i class="fa-regular fa-eye"></i> Xem gốc</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- 6. Tiếng Anh Pearson Versant B1 -->
-            <div class="cert-item-card" onclick="openCertModal('Chứng Chỉ Tiếng Anh Quốc Tế Versant Pearson (B1 CEFR)', '2fb0e02b-ff4e-46ce-b568-aad4f68f3c6d.jpeg', 'Pearson Versant English Placement Test (24/05/2025). Score: 46 - CEFR B1. Đọc: 68, Nghe: 48, Viết: 42.')">
-              <div class="cert-icon"><i class="fa-solid fa-language"></i></div>
-              <div class="cert-content">
-                <div class="cert-name">Tiếng Anh Pearson Versant (B1)</div>
-                <div class="cert-issuer">Pearson Education (Quốc tế)</div>
-                <div class="cert-footer-row">
-                  <span class="cert-rank">CEFR B1 (2025)</span>
-                  <span class="cert-action"><i class="fa-regular fa-eye"></i> Xem gốc</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- 7. Chuẩn Đầu Ra CNTT Đại Học -->
-            <div class="cert-item-card" onclick="openCertModal('Chứng Nhận Chuẩn Đầu Ra CNTT Trình Độ Đại Học', '56979ae0-0b90-4c26-9cc9-84da485531de.jpeg', 'Trường ĐH Sư Phạm Kỹ Thuật Nam Định cấp ngày 27/05/2024. Đạt chuẩn đầu ra trình độ ĐH về Ứng dụng CNTT (Trắc nghiệm 8.88, Thực hành 6.70).')">
-              <div class="cert-icon"><i class="fa-solid fa-desktop"></i></div>
-              <div class="cert-content">
-                <div class="cert-name">Chuẩn CNTT Trình Độ Đại Học</div>
-                <div class="cert-issuer">ĐH SPKT Nam Định (2024)</div>
-                <div class="cert-footer-row">
-                  <span class="cert-rank">Đạt chuẩn ĐH</span>
-                  <span class="cert-action"><i class="fa-regular fa-eye"></i> Xem gốc</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- 8. Bằng CĐ Nghề Hà Nam -->
-            <div class="cert-item-card" onclick="openCertModal('Bằng Tốt Nghiệp Cao Đẳng Kỹ Sư Thực Hành', '4b33cc38-3db0-45eb-8aec-fe5e4e10fb04.jpeg', 'Trường Cao Đẳng Nghề Hà Nam cấp ngày 26/04/2023. Công nhận danh hiệu Kỹ sư thực hành Công nghệ Ô tô.')">
-              <div class="cert-icon"><i class="fa-solid fa-car"></i></div>
-              <div class="cert-content">
-                <div class="cert-name">Bằng Kỹ Sư Thực Hành Ô Tô</div>
-                <div class="cert-issuer">Trường CĐ Nghề Hà Nam</div>
-                <div class="cert-footer-row">
-                  <span class="cert-rank">Chính quy (2023)</span>
-                  <span class="cert-action"><i class="fa-regular fa-eye"></i> Xem gốc</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- 9. Chứng Chỉ GDQP & An Ninh -->
-            <div class="cert-item-card" onclick="openCertModal('Chứng Chỉ Giáo Dục Quốc Phòng & An Ninh', '335cb62c-bc17-4827-a67a-0b9e693fdcb9.jpeg', 'Chứng chỉ hoàn thành môn học Giáo dục Quốc phòng & An ninh cấp ngày 17/06/2024. Xếp loại: GIỎI.')">
-              <div class="cert-icon"><i class="fa-solid fa-shield-halved"></i></div>
-              <div class="cert-content">
-                <div class="cert-name">Giáo Dục Quốc Phòng & An Ninh</div>
-                <div class="cert-issuer">Trung Tâm GDQP & AN (2024)</div>
-                <div class="cert-footer-row">
-                  <span class="cert-rank" style="color: var(--success);">Xếp loại: Giỏi</span>
-                  <span class="cert-action"><i class="fa-regular fa-eye"></i> Xem gốc</span>
-                </div>
-              </div>
-            </div>
-
           </div>
-        </div>
 
-      </section>
+          <!-- Kỹ năng chuyên môn -->
+          <div>
+            <h2 class="sec-heading">
+              <i class="fa-solid fa-gears"></i> Kỹ Năng Cốt Lõi
+            </h2>
+
+            <!-- SMT & Điện tử -->
+            <div class="skill-group">
+              <div class="skill-group-title">
+                <i class="fa-solid fa-microchip"></i> Dây Chuyền SMT & Bo Mạch
+              </div>
+              <div class="tag-cloud">
+                <span class="tag highlight">Vận hành máy SMT</span>
+                <span class="tag highlight">Printer / Mounter</span>
+                <span class="tag highlight">Lò hàn Reflow Oven</span>
+                <span class="tag">Kiểm soát Kem hàn</span>
+                <span class="tag">Phân tích lỗi SMD / PCB</span>
+                <span class="tag">Tiêu chuẩn ESD & 5S</span>
+              </div>
+            </div>
+
+            <!-- Đồ gá Jig & Cơ khí -->
+            <div class="skill-group">
+              <div class="skill-group-title">
+                <i class="fa-solid fa-cubes"></i> Đồ Gá (Jig / Fixture) & Cơ Khí
+              </div>
+              <div class="tag-cloud">
+                <span class="tag highlight">Testing Jig (FCT/ICT)</span>
+                <span class="tag highlight">Assembly Jig (Lắp ráp)</span>
+                <span class="tag highlight">SMT Carrier Pallet</span>
+                <span class="tag">Đọc bản vẽ 2D/3D</span>
+                <span class="tag">Căn chỉnh dung sai gá</span>
+                <span class="tag">Kaizen / Poka-Yoke</span>
+              </div>
+            </div>
+
+            <!-- Cơ điện & Ngoại ngữ -->
+            <div class="skill-group">
+              <div class="skill-group-title">
+                <i class="fa-solid fa-toolbox"></i> Cơ Điện & Ngoại Ngữ
+              </div>
+              <div class="tag-cloud">
+                <span class="tag">Hệ thống Khí nén & Điện</span>
+                <span class="tag">Bảo trì phòng ngừa TPM</span>
+                <span class="tag highlight">Tiếng Anh B1 (Versant)</span>
+                <span class="tag">Tin học ĐH (AutoCAD/Office)</span>
+              </div>
+            </div>
+          </div>
+
+        </aside>
+
+        <!-- Right Column: Summary, Experience, Research -->
+        <section class="cv-section-main">
+          
+          <!-- Tóm tắt hồ sơ năng lực -->
+          <div class="profile-card">
+            <i class="fa-solid fa-shield-halved" style="color: var(--primary); margin-right: 5px;"></i>
+            <strong>TỔNG QUAN NĂNG LỰC:</strong> Kỹ sư có chuyên môn thực chiến vững vàng trong <strong>vận hành & set-up dây chuyền SMT</strong> (máy in kem hàn, gắp chip, lò hàn reflow), <strong>thiết kế & căn chỉnh đồ gá (Jig / Fixture)</strong> cho các công đoạn lắp ráp/kiểm tra mạch điện tử, kết hợp kinh nghiệm quản lý xưởng cơ điện thực tế và bảo trì máy móc theo chuẩn 5S/TPM.
+          </div>
+
+          <!-- Kinh nghiệm làm việc -->
+          <div>
+            <h2 class="sec-heading">
+              <i class="fa-solid fa-briefcase"></i> Kinh Nghiệm Làm Việc & Thực Tế Kỹ Thuật
+            </h2>
+
+            <div class="exp-timeline">
+              
+              <!-- Vị trí 1: Kỹ thuật SMT & Đồ gá -->
+              <div class="timeline-node">
+                <div class="node-marker"></div>
+                <div class="node-header">
+                  <h3 class="node-title">Kỹ Sư Kỹ Thuật SMT & Cải Tiến Đồ Gá (Jig / Fixture)</h3>
+                  <span class="node-badge">Chuyên môn Sản xuất</span>
+                </div>
+                <div class="node-company">Xưởng Sản Xuất & Gia Công Cơ Điện Tử</div>
+                <ul class="bullet-points">
+                  <li>
+                    <strong>Vận hành & Set-up chuyền SMT:</strong> Trực tiếp thiết lập thông số cho máy in kem hàn (Solder Paste Printer), máy gắn chip tự động (Pick & Place Mounter) và lò hàn hồi lưu (Reflow Oven) theo đúng thông số profile nhiệt tiêu chuẩn.
+                  </li>
+                  <li>
+                    <strong>Thiết kế, chế tạo & căn chỉnh Đồ gá (Jig):</strong> Tham gia thiết kế và căn chỉnh các loại <em>Đồ gá in mạch (SMT Carrier / Pallet Jig)</em>, <em>Đồ gá lắp ráp linh kiện (Assembly Jig)</em> và <em>Đồ gá kiểm tra chức năng mạch (FCT/ICT Jig)</em> đảm bảo định vị chính xác, chống cắm ngược (Poka-Yoke).
+                  </li>
+                  <li>
+                    <strong>Kiểm soát chất lượng & Xử lý lỗi (Troubleshooting):</strong> Phân tích và xử lý nhanh các sự cố linh kiện SMD (lệch vị trí, bi hàn, hàn cầu, nứt chân hàn, thiếu linh kiện); điều chỉnh góc hút nozzle và áp lực in kem hàn để giảm tối đa tỷ lệ lỗi (NG rate).
+                  </li>
+                  <li>
+                    <strong>Bảo trì & Quản lý dây chuyền (TPM/5S):</strong> Thực hiện bảo dưỡng định kỳ đầu hút mounter, vệ sinh lưới in stencil, kiểm tra độ ẩm (MSD) và tuân thủ nghiêm ngặt tiêu chuẩn chống tĩnh điện (ESD) tại khu vực sản xuất.
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Vị trí 2: Phụ trách Xưởng & Hướng dẫn Thực hành Cơ điện -->
+              <div class="timeline-node">
+                <div class="node-marker"></div>
+                <div class="node-header">
+                  <h3 class="node-title">Kỹ Sư Quản Lý Xưởng Thực Hành & Đào Tạo Tay Nghề Kỹ Thuật</h3>
+                  <span class="node-badge">08/2023 – Hiện tại</span>
+                </div>
+                <div class="node-company">Trường Cao Đẳng Nghề Hà Nam</div>
+                <ul class="bullet-points">
+                  <li>
+                    <strong>Quản lý trang thiết bị & xưởng cơ điện:</strong> Vận hành, bảo trì định kỳ hệ thống máy móc gia công, hệ thống khí nén xưởng, máy đo kiểm và sa bàn điện tử theo quy chuẩn 5S và an toàn lao động.
+                  </li>
+                  <li>
+                    <strong>Hướng dẫn kỹ thuật thực hành:</strong> Hướng dẫn thao tác gá đặt chi tiết, kỹ thuật đo kiểm dung sai kích thước (thước kẹp, panme, đồng hồ so), đọc sơ đồ mạch điện - khí nén điều khiển.
+                  </li>
+                  <li>
+                    <strong>Phong trào thi đua tay nghề:</strong> Phụ trách rèn luyện kỹ năng thực hành cho học viên tham gia các hội thi sáng tạo kỹ thuật; được <strong>BCH Thành Đoàn Phủ Lý khen thưởng xuất sắc</strong>.
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Vị trí 3: Kỹ thuật viên Gara Ô tô -->
+              <div class="timeline-node">
+                <div class="node-marker"></div>
+                <div class="node-header">
+                  <h3 class="node-title">Kỹ Thuật Viên Sửa Chữa & Bảo Dưỡng Cơ Điện</h3>
+                  <span class="node-badge">Thực tế Xưởng</span>
+                </div>
+                <div class="node-company">Gara Ô Tô Tuấn Thành</div>
+                <ul class="bullet-points">
+                  <li>
+                    <strong>Gia công & Sửa chữa cơ cấu cơ khí:</strong> Tiếp nhận và xử lý các cụm chi tiết chuyển động, hệ thống gầm máy, cân chỉnh góc đặt bánh xe và bảo dưỡng định kỳ hệ thống truyền động.
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Dự án Nổi bật -->
+          <div>
+            <h2 class="sec-heading">
+              <i class="fa-solid fa-diagram-project"></i> Dự Án Kỹ Thuật & Cải Tiến Đồ Gá
+            </h2>
+            <div class="card-block" style="border-left: 3.5px solid var(--primary);">
+              <div class="node-header">
+                <div class="card-title">Thiết Kế Khung Gá & Sa Bàn Kiểm Tra Mạch Điều Khiển Điện Tử (EFI)</div>
+                <span class="node-badge">ĐH SPKT Nam Định</span>
+              </div>
+              <p style="font-size: 0.815rem; color: var(--text-muted); margin-top: 4px; line-height: 1.45;">
+                • Thiết kế khung đồ gá định vị cảm biến & cụm mạch ECU điều khiển; tích hợp cơ cấu gá kim phun áp lực cao và giắc cắm tín hiệu kiểm tra nhanh.<br/>
+                • Giúp kiểm tra tín hiệu xung điện áp, đo kiểm đáp ứng cảm biến và giả lập lỗi mạch nhanh chóng, phục vụ đánh giá chất lượng hệ thống chính xác.
+              </p>
+            </div>
+          </div>
+
+        </section>
+
+      </div>
 
     </div>
 
-    <!-- CV Footer Note -->
-    <footer class="cv-foot">
-      Hồ sơ năng lực điện tử chuẩn hóa của ứng viên <strong>Lý Xuân Tiến</strong> • Xác thực 100% qua hệ thống chứng chỉ & văn bằng gốc
-    </footer>
+    <!-- PAGE 2 CONTENT: VERIFIED CERTIFICATES, DEGREES & HONORS -->
+    <div class="page-2-wrapper">
+      
+      <section class="cert-section-wrapper">
+        <h2 class="sec-heading">
+          <i class="fa-solid fa-award"></i> Văn Bằng, Chứng Chỉ & Khen Thưởng Đã Xác Thực
+        </h2>
+        <p style="font-size: 0.815rem; color: var(--text-subtle);">
+          <i class="fa-solid fa-circle-info"></i> Toàn bộ văn bằng, chứng chỉ và giấy khen đã được đối chiếu minh chứng gốc 100%:
+        </p>
+
+        <div class="cert-list-grid">
+          
+          <!-- 1. Bằng Kỹ Sư ĐH SPKT Nam Định -->
+          <div class="cert-item-card" onclick="openCertModal('Bằng Kỹ Sư Công Nghệ Kỹ Thuật Ô Tô', 'a68c50a8-720a-4b4a-ad54-dd13c8ffa014.jpeg', 'Trường ĐH Sư Phạm Kỹ Thuật Nam Định cấp ngày 30/06/2025. Hạng tốt nghiệp: KHÁ. Số hiệu: A 003251.')">
+            <div class="cert-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="cert-content">
+              <div class="cert-name">Bằng Kỹ Sư Công Nghệ KT Ô Tô</div>
+              <div class="cert-issuer">ĐH Sư Phạm Kỹ Thuật Nam Định</div>
+              <div class="cert-footer-row">
+                <span class="cert-rank">Hạng Khá (2025)</span>
+                <span class="cert-action"><i class="fa-regular fa-eye"></i> Xem gốc</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Nghiệp Vụ Sư Phạm CĐ Cơ Điện HN -->
+          <div class="cert-item-card" onclick="openCertModal('Chứng Chỉ Nghiệp Vụ Sư Phạm Dạy Cao Đẳng, Trung Cấp', '72c8ae15-c576-4e4f-a770-b8c5c1a7f272.jpeg', 'Trường Cao Đẳng Cơ Điện Hà Nội cấp ngày 08/06/2023. Xếp loại: KHÁ. Đủ tiêu chuẩn giảng dạy nghề nghiệp.')">
+            <div class="cert-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+            <div class="cert-content">
+              <div class="cert-name">Nghiệp Vụ Sư Phạm Dạy CĐ & TC</div>
+              <div class="cert-issuer">Trường CĐ Cơ Điện Hà Nội</div>
+              <div class="cert-footer-row">
+                <span class="cert-rank">Xếp loại Khá (2023)</span>
+                <span class="cert-action"><i class="fa-regular fa-eye"></i> Xem gốc</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Giấy Khen Thành Đoàn Phủ Lý -->
+          <div class="cert-item-card" onclick="openCertModal('Giấy Khen Thành Đoàn TP Phủ Lý', '283bfdb7-5099-4556-9307-81d6da9aabc2.jpeg', 'BCH Đoàn TNCS Hồ Chí Minh TP Phủ Lý trao tặng Lý Xuân Tiến - UV BTV Đoàn trường CĐ Nghề Hà Nam vì thành tích xuất sắc năm học 2024 - 2025.')">
+            <div class="cert-icon" style="color: #ea580c; background: #fff7ed;"><i class="fa-solid fa-medal"></i></div>
+            <div class="cert-content">
+              <div class="cert-name">Giấy Khen Thành Đoàn Phủ Lý</div>
+              <div class="cert-issuer">Thành Đoàn TP Phủ Lý (2025)</div>
+              <div class="cert-footer-row">
+                <span class="cert-rank">Thành tích Xuất sắc</span>
+                <span class="cert-action"><i class="fa-regular fa-eye"></i> Xem gốc</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Tiêu Chuẩn Chức Danh Nghề Nghiệp Viên Chức GDNN -->
+          <div class="cert-item-card" onclick="openCertModal('Chứng Nhận Chức Danh Nghề Nghiệp Viên Chức GDNN', 'cd5a997b-528c-4266-b324-4a39c34e2cf2.jpeg', 'Trường Cao Đẳng Cơ Điện Phú Thọ cấp ngày 22/04/2024. Bồi dưỡng theo tiêu chuẩn chức danh nghề nghiệp viên chức GDNN.')">
+            <div class="cert-icon"><i class="fa-solid fa-certificate"></i></div>
+            <div class="cert-content">
+              <div class="cert-name">Chức Danh Nghề Nghiệp GDNN</div>
+              <div class="cert-issuer">Trường CĐ Cơ Điện Phú Thọ</div>
+              <div class="cert-footer-row">
+                <span class="cert-rank">Hoàn thành (2024)</span>
+                <span class="cert-action"><i class="fa-regular fa-eye"></i> Xem gốc</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Chuyển Đổi Số & Bài Giảng E-Learning -->
+          <div class="cert-item-card" onclick="openCertModal('Chứng Nhận Chuyển Đổi Số Trong Giáo Dục & E-Learning', '0841fa33-46e2-441b-9dce-2d99624b5ae6.jpeg', 'Chương trình Quốc gia Chuyển đổi số trong GD & Xây dựng bài giảng điện tử E-Learning - Vietnam Online Academy (2023).')">
+            <div class="cert-icon"><i class="fa-solid fa-laptop-code"></i></div>
+            <div class="cert-content">
+              <div class="cert-name">Chuyển Đổi Số & E-Learning</div>
+              <div class="cert-issuer">Vietnam Online Academy</div>
+              <div class="cert-footer-row">
+                <span class="cert-rank">Chương trình QG</span>
+                <span class="cert-action"><i class="fa-regular fa-eye"></i> Xem gốc</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Tiếng Anh Pearson Versant B1 -->
+          <div class="cert-item-card" onclick="openCertModal('Chứng Chỉ Tiếng Anh Quốc Tế Versant Pearson (B1 CEFR)', '2fb0e02b-ff4e-46ce-b568-aad4f68f3c6d.jpeg', 'Pearson Versant English Placement Test (2025). GSE Score: 46 - CEFR B1. Đọc: 68, Nghe: 48, Viết: 42.')">
+            <div class="cert-icon"><i class="fa-solid fa-language"></i></div>
+            <div class="cert-content">
+              <div class="cert-name">Tiếng Anh Pearson Versant (B1)</div>
+              <div class="cert-issuer">Pearson Education (Quốc tế)</div>
+              <div class="cert-footer-row">
+                <span class="cert-rank">CEFR B1 (2025)</span>
+                <span class="cert-action"><i class="fa-regular fa-eye"></i> Xem gốc</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. Chuẩn Đầu Ra CNTT Đại Học -->
+          <div class="cert-item-card" onclick="openCertModal('Chứng Nhận Chuẩn Đầu Ra CNTT Trình Độ Đại Học', '56979ae0-0b90-4c26-9cc9-84da485531de.jpeg', 'ĐH Sư Phạm Kỹ Thuật Nam Định cấp ngày 27/05/2024. Đạt chuẩn đầu ra trình độ ĐH về Ứng dụng CNTT (Trắc nghiệm 8.88, Thực hành 6.70).')">
+            <div class="cert-icon"><i class="fa-solid fa-desktop"></i></div>
+            <div class="cert-content">
+              <div class="cert-name">Chuẩn CNTT Trình Độ Đại Học</div>
+              <div class="cert-issuer">ĐH SPKT Nam Định (2024)</div>
+              <div class="cert-footer-row">
+                <span class="cert-rank">Đạt chuẩn ĐH</span>
+                <span class="cert-action"><i class="fa-regular fa-eye"></i> Xem gốc</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. Bằng CĐ Nghề Hà Nam -->
+          <div class="cert-item-card" onclick="openCertModal('Bằng Tốt Nghiệp Cao Đẳng Kỹ Sư Thực Hành', '4b33cc38-3db0-45eb-8aec-fe5e4e10fb04.jpeg', 'Trường Cao Đẳng Nghề Hà Nam cấp ngày 26/04/2023. Công nhận danh hiệu Kỹ sư thực hành Công nghệ Ô tô.')">
+            <div class="cert-icon"><i class="fa-solid fa-car"></i></div>
+            <div class="cert-content">
+              <div class="cert-name">Bằng Kỹ Sư Thực Hành Ô Tô</div>
+              <div class="cert-issuer">Trường CĐ Nghề Hà Nam</div>
+              <div class="cert-footer-row">
+                <span class="cert-rank">Chính quy (2023)</span>
+                <span class="cert-action"><i class="fa-regular fa-eye"></i> Xem gốc</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9. Chứng Chỉ GDQP & An Ninh -->
+          <div class="cert-item-card" onclick="openCertModal('Chứng Chỉ Giáo Dục Quốc Phòng & An Ninh', '335cb62c-bc17-4827-a67a-0b9e693fdcb9.jpeg', 'Chứng chỉ hoàn thành môn học Giáo dục Quốc phòng & An ninh cấp ngày 17/06/2024. Xếp loại: GIỎI.')">
+            <div class="cert-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div class="cert-content">
+              <div class="cert-name">Giáo Dục Quốc Phòng & AN</div>
+              <div class="cert-issuer">Trung Tâm GDQP & AN (2024)</div>
+              <div class="cert-footer-row">
+                <span class="cert-rank" style="color: var(--success);">Xếp loại: Giỏi</span>
+                <span class="cert-action"><i class="fa-regular fa-eye"></i> Xem gốc</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Cam kết & Footer Note -->
+      <footer class="cv-foot">
+        <p style="margin-bottom: 4px;"><strong>Lời cam đoan:</strong> Tôi xin cam đoan các thông tin quá trình học tập, kinh nghiệm kỹ thuật và hình ảnh văn bằng chứng chỉ đính kèm là hoàn toàn chính xác.</p>
+        <p>Hồ sơ năng lực kỹ thuật điện tử của ứng viên <strong>Lý Xuân Tiến</strong> • Liên hệ: <strong>0394 329 121</strong> - <strong>tienly804@gmail.com</strong></p>
+      </footer>
+
+    </div>
 
   </main>
 
