@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" data-lang="bilingual">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>李春进 - 自动化、机器人与模具治具工程师 | CV Lý Xuân Tiến</title>
-  <meta name="description" content="李春进个人简历 - 自动化、机器人、模具治具与SMT工程师 | Hồ sơ năng lực song ngữ Trung - Việt của Lý Xuân Tiến." />
+  <title id="pageTitle">李春进 - 自动化、机器人与模具治具工程师 | CV Lý Xuân Tiến</title>
+  <meta name="description" content="Hồ sơ năng lực của Lý Xuân Tiến - Kỹ sư Tự Động Hóa, Robot, Khuôn Mẫu Đồ Gá & SMT (Chuyển đổi linh hoạt Tiếng Việt & Song ngữ Trung - Việt)." />
 
   <!-- Google Fonts & Font Awesome Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -120,6 +120,18 @@
       transform: translateY(-1px);
     }
 
+    .btn-lang-toggle {
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+      color: #ffffff;
+      border: none;
+    }
+
+    .btn-lang-toggle:hover {
+      background: linear-gradient(135deg, #0369a1 0%, #075985 100%);
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.35);
+    }
+
     .btn-primary {
       background: linear-gradient(135deg, #0f4c81 0%, #1e40af 100%);
       color: #ffffff;
@@ -222,6 +234,16 @@
       text-transform: uppercase;
       color: #93c5fd;
       margin-bottom: 8px;
+    }
+
+    .candidate-name-vn-only {
+      font-size: 2.1rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-bottom: 6px;
+      display: none;
     }
 
     .candidate-roles {
@@ -461,6 +483,54 @@
       display: block;
     }
 
+    /* Tag Cloud for VN mode */
+    .skill-group-vn {
+      margin-bottom: 11px;
+    }
+    .skill-group-vn:last-child {
+      margin-bottom: 0;
+    }
+    .skill-group-vn-title {
+      font-size: 0.76rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--text-subtle);
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    .tag {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 3.5px 7px;
+      border-radius: var(--radius-sm);
+      font-size: 0.75rem;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: var(--transition);
+    }
+    .tag:hover {
+      border-color: var(--primary-light);
+      background: var(--primary-subtle);
+      color: var(--primary);
+    }
+    .tag.highlight {
+      background: var(--primary-subtle);
+      border-color: var(--primary-light);
+      color: var(--primary);
+      font-weight: 600;
+    }
+
     /* Timeline Section */
     .exp-timeline {
       position: relative;
@@ -649,6 +719,40 @@
       display: inline-flex;
       align-items: center;
       gap: 3px;
+    }
+
+    /* ==============================================
+       LANGUAGE CONDITIONAL STYLES
+       ============================================== */
+    /* When in Vietnamese Mode */
+    [data-lang="vn"] .mode-bilingual-only {
+      display: none !important;
+    }
+    [data-lang="vn"] .mode-vn-only {
+      display: block !important;
+    }
+    [data-lang="vn"] span.mode-vn-only,
+    [data-lang="vn"] a.mode-vn-only {
+      display: inline-flex !important;
+    }
+    [data-lang="vn"] h1.mode-vn-only {
+      display: block !important;
+    }
+
+    /* When in Bilingual Mode */
+    [data-lang="bilingual"] .mode-vn-only {
+      display: none !important;
+    }
+    [data-lang="bilingual"] .mode-bilingual-only {
+      display: block !important;
+    }
+    [data-lang="bilingual"] span.mode-bilingual-only,
+    [data-lang="bilingual"] a.mode-bilingual-only {
+      display: inline-flex !important;
+    }
+    [data-lang="bilingual"] div.mode-bilingual-only,
+    [data-lang="bilingual"] h1.mode-bilingual-only {
+      display: block !important;
     }
 
     /* Modal / Lightbox */
@@ -870,6 +974,11 @@
         font-size: 1.1rem !important;
       }
 
+      .candidate-name-vn-only {
+        color: #ffffff !important;
+        font-size: 1.65rem !important;
+      }
+
       .avatar-img {
         width: 95px !important;
         height: 95px !important;
@@ -1015,16 +1124,25 @@
 </head>
 <body>
 
-  <!-- Top Action Bar (Print / PDF / Theme Switcher) -->
+  <!-- Top Action Bar (Language Switcher / Theme / Print) -->
   <div class="top-action-bar">
     <div class="action-btns">
-      <button class="btn" id="themeToggle" onclick="toggleTheme()" title="Chuyển chế độ Sáng / Tối | 切换主题">
-        <i class="fa-solid fa-moon"></i>
-        <span>Giao diện / 模式</span>
+      <!-- Language Toggle Button -->
+      <button class="btn btn-lang-toggle" id="langToggle" onclick="toggleLanguage()" title="Chuyển đổi giữa Bản Tiếng Việt và Bản Song Ngữ Trung - Việt">
+        <i class="fa-solid fa-language"></i>
+        <span id="langBtnText">Bản Tiếng Việt</span>
       </button>
-      <button class="btn btn-primary" onclick="window.print()" title="Xuất PDF hoặc In CV | 导出PDF或打印">
+
+      <!-- Theme Switcher -->
+      <button class="btn" id="themeToggle" onclick="toggleTheme()" title="Chuyển chế độ Sáng / Tối">
+        <i class="fa-solid fa-moon"></i>
+        <span id="themeBtnText">Giao diện</span>
+      </button>
+
+      <!-- Print / Export PDF -->
+      <button class="btn btn-primary" onclick="window.print()" title="Xuất PDF hoặc In CV">
         <i class="fa-solid fa-print"></i>
-        <span>Xuất PDF / 打印简历</span>
+        <span id="printBtnText">Xuất PDF / In CV</span>
       </button>
     </div>
   </div>
@@ -1043,13 +1161,24 @@
         </div>
 
         <div class="header-details">
-          <h1 class="candidate-name-cn">李春进</h1>
-          <div class="candidate-name-vn">LÝ XUÂN TIẾN</div>
+          <!-- Bilingual Name -->
+          <div class="mode-bilingual-only">
+            <h1 class="candidate-name-cn">李春进</h1>
+            <div class="candidate-name-vn">LÝ XUÂN TIẾN</div>
+          </div>
+          <!-- VN Only Name -->
+          <h1 class="candidate-name-vn-only mode-vn-only">LÝ XUÂN TIẾN</h1>
           
           <div class="candidate-roles">
-            <span class="role-badge primary-role"><i class="fa-solid fa-robot"></i> 自动化工程师 / Kỹ Sư Tự Động Hóa</span>
-            <span class="role-badge"><i class="fa-solid fa-shapes"></i> 模具治具 / Khuôn Mẫu & Đồ Gá</span>
-            <span class="role-badge"><i class="fa-solid fa-microchip"></i> SMT与机器人 / SMT & Robot</span>
+            <!-- Bilingual Roles -->
+            <span class="role-badge primary-role mode-bilingual-only"><i class="fa-solid fa-robot"></i> 自动化工程师 / Kỹ Sư Tự Động Hóa</span>
+            <span class="role-badge mode-bilingual-only"><i class="fa-solid fa-shapes"></i> 模具治具 / Khuôn Mẫu & Đồ Gá</span>
+            <span class="role-badge mode-bilingual-only"><i class="fa-solid fa-microchip"></i> SMT与机器人 / SMT & Robot</span>
+
+            <!-- VN Only Roles -->
+            <span class="role-badge primary-role mode-vn-only"><i class="fa-solid fa-robot"></i> Kỹ Sư Tự Động Hóa & Robot</span>
+            <span class="role-badge mode-vn-only"><i class="fa-solid fa-shapes"></i> Khuôn Mẫu & Đồ Gá Cơ Khí</span>
+            <span class="role-badge mode-vn-only"><i class="fa-solid fa-microchip"></i> SMT & Công Nghệ KT Ô Tô</span>
           </div>
 
           <div class="contact-grid">
@@ -1063,7 +1192,8 @@
             </a>
             <div class="contact-link">
               <i class="fa-solid fa-location-dot"></i>
-              <span>三祝, 宁平省 - 河南 / Tam Chúc, Ninh Bình - Hà Nam</span>
+              <span class="mode-bilingual-only">三祝, 宁平省 - 河南 / Tam Chúc, Ninh Bình - Hà Nam</span>
+              <span class="mode-vn-only">Tam Chúc, Ninh Bình</span>
             </div>
             <div class="contact-link">
               <i class="fa-solid fa-calendar-day"></i>
@@ -1083,49 +1213,92 @@
         <!-- Mục tiêu nghề nghiệp / 工作目标 -->
         <div>
           <h2 class="sec-heading">
-            <span class="sec-heading-left"><i class="fa-solid fa-bullseye"></i> 工作目标</span>
-            <span class="sub-heading-vn">Mục Tiêu</span>
+            <span class="sec-heading-left">
+              <i class="fa-solid fa-bullseye"></i>
+              <span class="mode-bilingual-only">工作目标</span>
+              <span class="mode-vn-only">Mục Tiêu Nghề Nghiệp</span>
+            </span>
+            <span class="sub-heading-vn mode-bilingual-only">Mục Tiêu</span>
           </h2>
-          <div class="profile-card" style="padding: 8px 10px; border-left-width: 3px;">
+          
+          <!-- Bilingual Goal -->
+          <div class="profile-card mode-bilingual-only" style="padding: 8px 10px; border-left-width: 3px;">
             <strong class="cn-text">运用专业技能与实战经验提升生产效率，愿在公司长期稳定发展。</strong>
             <span class="vn-sub">Áp dụng kiến thức, kỹ năng và kinh nghiệm thực tế nâng cao hiệu suất sản xuất, gắn bó và phát triển lâu dài.</span>
           </div>
+
+          <!-- VN Only Goal -->
+          <p class="mode-vn-only" style="font-size: 0.825rem; color: var(--text-muted); line-height: 1.48;">
+            Ứng tuyển <strong>Kỹ sư Tự động hóa, Kỹ sư Khuôn mẫu & Đồ gá, Kỹ thuật Robot</strong>. Phát huy nền tảng Kỹ sư Cơ điện, kinh nghiệm vận hành robot cắt, dạy điểm và sửa chương trình cánh tay robot, cùng năng lực chế tạo và sửa chữa khuôn mẫu, đồ gá chính xác nhằm nâng cao năng suất nhà máy.
+          </p>
         </div>
 
         <!-- Học vấn & Bằng cấp / 学历 -->
         <div>
           <h2 class="sec-heading">
-            <span class="sec-heading-left"><i class="fa-solid fa-graduation-cap"></i> 学历</span>
-            <span class="sub-heading-vn">Học Vấn</span>
+            <span class="sec-heading-left">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <span class="mode-bilingual-only">学历</span>
+              <span class="mode-vn-only">Học Vấn & Bằng Cấp</span>
+            </span>
+            <span class="sub-heading-vn mode-bilingual-only">Học Vấn</span>
           </h2>
 
           <!-- Bằng Đại học -->
           <div class="card-block">
-            <div class="card-title">汽车工程技术工程师</div>
-            <div class="card-sub">南定工业师范大学 | ĐH SPKT Nam Định</div>
+            <div class="card-title">
+              <span class="mode-bilingual-only">汽车工程技术工程师</span>
+              <span class="mode-vn-only">Kỹ Sư Công Nghệ KT Ô Tô</span>
+            </div>
+            <div class="card-sub">
+              <span class="mode-bilingual-only">南定工业师范大学 | ĐH SPKT Nam Định</span>
+              <span class="mode-vn-only">ĐH Sư Phạm Kỹ Thuật Nam Định</span>
+            </div>
             <div class="card-meta">
               <span><i class="fa-regular fa-calendar"></i> 2021 – 2025</span>
               <span>•</span>
-              <span style="color: var(--success); font-weight: 600;">良好 / Khá</span>
+              <span style="color: var(--success); font-weight: 600;">
+                <span class="mode-bilingual-only">良好 / Khá</span>
+                <span class="mode-vn-only">Hạng: Khá</span>
+              </span>
             </div>
             <div class="card-desc">
-              <strong>毕业课题:</strong> 电控系统自动化测试台架与治具研制。
-              <span class="vn-sub">Chế tạo sa bàn & đồ gá tự động hóa kiểm tra mạch điều khiển.</span>
+              <span class="mode-bilingual-only">
+                <strong>毕业课题:</strong> 电控系统自动化测试台架与治具研制。
+                <span class="vn-sub">Chế tạo sa bàn & đồ gá tự động hóa kiểm tra mạch điều khiển.</span>
+              </span>
+              <span class="mode-vn-only">
+                <strong>Đề tài tốt nghiệp:</strong> Thiết kế chế tạo sa bàn và đồ gá tự động hóa kiểm tra hệ thống điều khiển điện tử tích hợp cảm biến và van chấp hành.
+              </span>
             </div>
           </div>
 
           <!-- Bằng Cao đẳng -->
           <div class="card-block">
-            <div class="card-title">机电与机械实用工程师</div>
-            <div class="card-sub">河南职业大专 | CĐ Nghề Hà Nam</div>
+            <div class="card-title">
+              <span class="mode-bilingual-only">机电与机械实用工程师</span>
+              <span class="mode-vn-only">Kỹ Sư Thực Hành Cơ Khí - Cơ Điện</span>
+            </div>
+            <div class="card-sub">
+              <span class="mode-bilingual-only">河南职业大专 | CĐ Nghề Hà Nam</span>
+              <span class="mode-vn-only">Trường Cao Đẳng Nghề Hà Nam</span>
+            </div>
             <div class="card-meta">
               <span><i class="fa-regular fa-calendar"></i> 2021 – 2023</span>
               <span>•</span>
-              <span>正规 / Chính quy</span>
+              <span>
+                <span class="mode-bilingual-only">正规 / Chính quy</span>
+                <span class="mode-vn-only">Chính quy</span>
+              </span>
             </div>
             <div class="card-desc">
-              精密机械加工、治具装配与机电安装维护。
-              <span class="vn-sub">Gia công cơ khí chính xác, chế tạo đồ gá và bảo dưỡng cơ điện.</span>
+              <span class="mode-bilingual-only">
+                精密机械加工、治具装配与机电安装维护。
+                <span class="vn-sub">Gia công cơ khí chính xác, chế tạo đồ gá và bảo dưỡng cơ điện.</span>
+              </span>
+              <span class="mode-vn-only">
+                Thực hành chuyên sâu gia công cơ khí chính xác, chế tạo đồ gá, đo kiểm dung sai và lắp ráp cụm chi tiết cơ điện tử.
+              </span>
             </div>
           </div>
         </div>
@@ -1133,11 +1306,16 @@
         <!-- Kỹ năng chuyên môn / 技能 -->
         <div>
           <h2 class="sec-heading">
-            <span class="sec-heading-left"><i class="fa-solid fa-gears"></i> 技能清单</span>
-            <span class="sub-heading-vn">Kỹ Năng</span>
+            <span class="sec-heading-left">
+              <i class="fa-solid fa-gears"></i>
+              <span class="mode-bilingual-only">技能清单</span>
+              <span class="mode-vn-only">Kỹ Năng Kỹ Thuật</span>
+            </span>
+            <span class="sub-heading-vn mode-bilingual-only">Kỹ Năng</span>
           </h2>
 
-          <ul class="skill-list-bilingual">
+          <!-- Bilingual Skill List -->
+          <ul class="skill-list-bilingual mode-bilingual-only">
             <li>
               <span class="skill-cn">机械手示教点位与改程序</span>
               <span class="skill-vn">Dạy điểm, chỉnh sửa chương trình cánh tay robot</span>
@@ -1175,6 +1353,53 @@
               <span class="skill-vn">Ngoại ngữ: Tiếng Trung giao tiếp xưởng, Tiếng Anh B1</span>
             </li>
           </ul>
+
+          <!-- VN Only Skill Groups -->
+          <div class="mode-vn-only">
+            <!-- Robot & Tự động hóa -->
+            <div class="skill-group-vn">
+              <div class="skill-group-vn-title">
+                <i class="fa-solid fa-robot"></i> Robot & Tự Động Hóa
+              </div>
+              <div class="tag-cloud">
+                <span class="tag highlight">Vận hành Robot cắt</span>
+                <span class="tag highlight">Sửa chương trình Robot</span>
+                <span class="tag highlight">Dạy điểm Cánh tay Robot</span>
+                <span class="tag">Lập trình PLC cơ bản</span>
+                <span class="tag">Hệ thống Khí nén</span>
+                <span class="tag">Cảm biến Quang - Tiệm cận</span>
+              </div>
+            </div>
+
+            <!-- Khuôn mẫu & Đồ gá -->
+            <div class="skill-group-vn">
+              <div class="skill-group-vn-title">
+                <i class="fa-solid fa-shapes"></i> Khuôn Mẫu & Đồ Gá
+              </div>
+              <div class="tag-cloud">
+                <span class="tag highlight">Chế tạo & Sửa khuôn</span>
+                <span class="tag highlight">Thiết kế Đồ gá định vị</span>
+                <span class="tag highlight">Đồ gá kẹp tự động</span>
+                <span class="tag">Phục hồi bề mặt khuôn</span>
+                <span class="tag">Căn chỉnh khe hở khuôn</span>
+                <span class="tag">Đồ gá kiểm tra mạch</span>
+              </div>
+            </div>
+
+            <!-- SMT & Cơ khí -->
+            <div class="skill-group-vn">
+              <div class="skill-group-vn-title">
+                <i class="fa-solid fa-toolbox"></i> SMT & Bản Vẽ Cơ Khí
+              </div>
+              <div class="tag-cloud">
+                <span class="tag">Dây chuyền SMT</span>
+                <span class="tag">Lò hàn Reflow & Kem hàn</span>
+                <span class="tag">Bản vẽ kỹ thuật 2D 3D</span>
+                <span class="tag">Bảo dưỡng TPM 5S</span>
+                <span class="tag highlight">Tiếng Anh B1</span>
+              </div>
+            </div>
+          </div>
         </div>
 
       </aside>
@@ -1185,15 +1410,27 @@
         <!-- Tóm tắt hồ sơ năng lực / 个人优势 -->
         <div class="profile-card">
           <i class="fa-solid fa-shield-halved" style="color: var(--primary); margin-right: 5px;"></i>
-          <strong class="cn-text">个人优势：熟练掌握机器人示教改程序、切割机器人操作、模具制造维修与治具制作；熟悉SMT线体工艺及机电设备维护，严格执行 5S 与 TPM 标准。</strong>
-          <span class="vn-sub">Ưu thế cá nhân: Thành thạo dạy điểm sửa chương trình cánh tay robot, vận hành robot cắt, chế tạo sửa chữa khuôn mẫu, đồ gá kẹp khí nén; am hiểu chuyền SMT, bảo trì cơ điện và tiêu chuẩn 5S TPM.</span>
+          <!-- Bilingual Summary -->
+          <div class="mode-bilingual-only">
+            <strong class="cn-text">个人优势：熟练掌握机器人示教改程序、切割机器人操作、模具制造维修与治具制作；熟悉SMT线体工艺及机电设备维护，严格执行 5S 与 TPM 标准。</strong>
+            <span class="vn-sub">Ưu thế cá nhân: Thành thạo dạy điểm sửa chương trình cánh tay robot, vận hành robot cắt, chế tạo sửa chữa khuôn mẫu, đồ gá kẹp khí nén; am hiểu chuyền SMT, bảo trì cơ điện và tiêu chuẩn 5S TPM.</span>
+          </div>
+
+          <!-- VN Only Summary -->
+          <div class="mode-vn-only">
+            <strong>TỔNG QUAN NĂNG LỰC:</strong> Kỹ sư có kỹ năng thực chiến vững vàng về <strong>vận hành robot cắt, dạy điểm và sửa chương trình cánh tay robot công nghiệp</strong>, thành thạo <strong>chế tạo và sửa chữa khuôn mẫu, đồ gá định vị và đồ gá kẹp khí nén tự động</strong>; am hiểu quy trình vận hành dây chuyền SMT, đọc hiểu bản vẽ cơ khí 2D 3D và tác phong công nghiệp chuẩn 5S TPM.
+          </div>
         </div>
 
         <!-- Kinh nghiệm làm việc / 工作经验 -->
         <div>
           <h2 class="sec-heading">
-            <span class="sec-heading-left"><i class="fa-solid fa-briefcase"></i> 工作经验</span>
-            <span class="sub-heading-vn">Kinh Nghiệm Làm Việc</span>
+            <span class="sec-heading-left">
+              <i class="fa-solid fa-briefcase"></i>
+              <span class="mode-bilingual-only">工作经验</span>
+              <span class="mode-vn-only">Kinh Nghiệm Làm Việc & Thực Tế Kỹ Thuật</span>
+            </span>
+            <span class="sub-heading-vn mode-bilingual-only">Kinh Nghiệm Làm Việc</span>
           </h2>
 
           <div class="exp-timeline">
@@ -1202,11 +1439,22 @@
             <div class="timeline-node">
               <div class="node-marker"></div>
               <div class="node-header">
-                <h3 class="node-title">自动化、机器人与模具治具工程师</h3>
-                <span class="node-badge">2023 – 至今 / Hiện tại</span>
+                <h3 class="node-title">
+                  <span class="mode-bilingual-only">自动化、机器人与模具治具工程师</span>
+                  <span class="mode-vn-only">Kỹ Sư Robot, Khuôn Mẫu Đồ Gá & Tự Động Hóa</span>
+                </h3>
+                <span class="node-badge">
+                  <span class="mode-bilingual-only">2023 – 至今 / Hiện tại</span>
+                  <span class="mode-vn-only">Sản xuất & Kỹ thuật</span>
+                </span>
               </div>
-              <div class="node-company">电子与精密机械制造厂 / Xưởng Sản Xuất Điện Tử & Cơ Khí Chính Xác</div>
-              <ul class="bullet-points">
+              <div class="node-company">
+                <span class="mode-bilingual-only">电子与精密机械制造厂 / Xưởng Sản Xuất Điện Tử & Cơ Khí Chính Xác</span>
+                <span class="mode-vn-only">Xưởng Sản Xuất Khuôn Mẫu, Đồ Gá & Gia Công Cơ Điện Tử</span>
+              </div>
+
+              <!-- Bilingual Bullets -->
+              <ul class="bullet-points mode-bilingual-only">
                 <li>
                   <span class="bullet-cn">模具制作与维修保养：负责冲压、注塑模具装配，修复型腔磨损，更换顶针导柱，调整分型面密合度。</span>
                   <span class="bullet-vn">Chế tạo & sửa chữa khuôn: Lắp ráp khuôn, sửa chữa phục hồi lòng khuôn mòn xước, thay thế linh kiện, căn chỉnh độ khít.</span>
@@ -1228,24 +1476,64 @@
                   <span class="bullet-vn">Vận hành chuyền SMT & viết SOP: Set-up máy in kem hàn, máy dán chip, lò hàn hồi lưu; lập kế hoạch bảo dưỡng TPM.</span>
                 </li>
               </ul>
+
+              <!-- VN Only Bullets -->
+              <ul class="bullet-points mode-vn-only">
+                <li>
+                  <strong>Chế tạo & Sửa chữa khuôn mẫu:</strong> Tham gia trực tiếp quy trình gia công, lắp ráp và căn chỉnh bộ khuôn; xử lý sửa chữa phục hồi lòng khuôn bị mòn xước, thay thế ty đẩy, chốt dẫn hướng và căn chỉnh độ khít bề mặt phân khuôn trước khi đưa vào dập ép hàng loạt.
+                </li>
+                <li>
+                  <strong>Thiết kế & Chế tạo Đồ gá:</strong> Gia công chế tạo các loại đồ gá định vị gia công, đồ gá kẹp khí nén tự động và đồ gá kiểm tra kích thước chi tiết; tối ưu cơ cấu chống gá ngược và rút ngắn thời gian kẹp phôi.
+                </li>
+                <li>
+                  <strong>Vận hành & Cài đặt Robot cắt:</strong> Cài đặt thông số tốc độ, dòng cắt và quỹ đạo chuyển động cho hệ thống robot cắt tự động; theo dõi và tinh chỉnh đường cắt chuẩn xác theo bản vẽ, hạn chế ba-via và sai lệch kích thước phôi.
+                </li>
+                <li>
+                  <strong>Sửa chương trình & Dạy điểm Cánh tay Robot:</strong> Trực tiếp thực hiện dạy điểm tọa độ, hiệu chỉnh quỹ đạo di chuyển và chỉnh sửa logic chương trình cánh tay robot phục vụ gắp thả phôi, chuyển trạm và cấp dỡ chi tiết tự động trên chuyền.
+                </li>
+                <li>
+                  <strong>Vận hành dây chuyền SMT & Bảo trì:</strong> Set-up chương trình máy in kem hàn, nạp linh kiện máy dán chip, cài đặt profile lò hàn hồi lưu và bảo dưỡng định kỳ hệ thống cấp khí nén, cơ cấu chấp hành theo chuẩn 5S TPM.
+                </li>
+              </ul>
             </div>
 
             <!-- Vị trí 2: Kỹ thuật viên Gara Ô tô -->
             <div class="timeline-node">
               <div class="node-marker"></div>
               <div class="node-header">
-                <h3 class="node-title">机电维修与保养技术员</h3>
-                <span class="node-badge">实际车间 / Thực tế Xưởng</span>
+                <h3 class="node-title">
+                  <span class="mode-bilingual-only">机电维修与保养技术员</span>
+                  <span class="mode-vn-only">Kỹ Thuật Viên Sửa Chữa & Bảo Dưỡng Cơ Điện</span>
+                </h3>
+                <span class="node-badge">
+                  <span class="mode-bilingual-only">实际车间 / Thực tế Xưởng</span>
+                  <span class="mode-vn-only">Thực tế Xưởng</span>
+                </span>
               </div>
-              <div class="node-company">俊成汽车修配厂 / Gara Ô Tô Tuấn Thành</div>
-              <ul class="bullet-points">
+              <div class="node-company">
+                <span class="mode-bilingual-only">俊成汽车修配厂 / Gara Ô Tô Tuấn Thành</span>
+                <span class="mode-vn-only">Gara Ô Tô Tuấn Thành</span>
+              </div>
+
+              <!-- Bilingual Bullets -->
+              <ul class="bullet-points mode-bilingual-only">
                 <li>
                   <span class="bullet-cn">机电执行机构检测与维护：检查与诊断机械传动系统、转向机构、制动系统及电气控制线路。</span>
                   <span class="bullet-vn">Bảo dưỡng & xử lý cơ cấu chấp hành: Kiểm tra chẩn đoán hệ thống truyền động cơ điện, phanh, lái và mạch điện điều khiển.</span>
                 </li>
                 <li>
-                  <span class="bullet-cn">设备定期保养与定位校准：执行机械部件润滑保养、四轮定位校正及设备安全运行检查。</span>
+                  <span class="bullet-cn">设备定期保养与定位校准：执行机械部件润滑保养、四轮定位角度校正及设备安全运行检查。</span>
                   <span class="bullet-vn">Bảo trì & cân chỉnh thiết bị: Bảo dưỡng định kỳ cơ điện, cân chỉnh góc đặt và kiểm tra an toàn vận hành.</span>
+                </li>
+              </ul>
+
+              <!-- VN Only Bullets -->
+              <ul class="bullet-points mode-vn-only">
+                <li>
+                  <strong>Bảo dưỡng & Xử lý cơ cấu chấp hành:</strong> Kiểm tra chẩn đoán các hệ thống truyền động cơ điện, cơ cấu lái, hệ thống phanh và điện điều khiển thân xe.
+                </li>
+                <li>
+                  <strong>Bảo trì & Cân chỉnh thiết bị:</strong> Thực hiện bảo dưỡng định kỳ các cụm chi tiết cơ điện, cân chỉnh góc đặt và kiểm tra an toàn vận hành.
                 </li>
               </ul>
             </div>
@@ -1256,19 +1544,37 @@
         <!-- Dự án Nổi bật / 项目经验 -->
         <div>
           <h2 class="sec-heading">
-            <span class="sec-heading-left"><i class="fa-solid fa-diagram-project"></i> 项目经验</span>
-            <span class="sub-heading-vn">Dự Án Kỹ Thuật</span>
+            <span class="sec-heading-left">
+              <i class="fa-solid fa-diagram-project"></i>
+              <span class="mode-bilingual-only">项目经验</span>
+              <span class="mode-vn-only">Dự Án Tự Động Hóa & Đồ Gá Kiểm Tra</span>
+            </span>
+            <span class="sub-heading-vn mode-bilingual-only">Dự Án Kỹ Thuật</span>
           </h2>
           <div class="card-block" style="border-left: 3.5px solid var(--primary);">
             <div class="node-header">
-              <div class="card-title">电控系统自动化测试治具与台架研制</div>
-              <span class="node-badge">南定工师大 / ĐH SPKT Nam Định</span>
+              <div class="card-title">
+                <span class="mode-bilingual-only">电控系统自动化测试治具与台架研制</span>
+                <span class="mode-vn-only">Hệ Thống Đồ Gá & Sa Bàn Tự Động Hóa Kiểm Tra Mạch Điều Khiển</span>
+              </div>
+              <span class="node-badge">
+                <span class="mode-bilingual-only">南定工师大 / ĐH SPKT Nam Định</span>
+                <span class="mode-vn-only">ĐH SPKT Nam Định</span>
+              </span>
             </div>
-            <p style="font-size: 0.815rem; color: var(--text-muted); margin-top: 3px; line-height: 1.42;">
+
+            <!-- Bilingual Project Description -->
+            <p class="mode-bilingual-only" style="font-size: 0.815rem; color: var(--text-muted); margin-top: 3px; line-height: 1.42;">
               <span class="bullet-cn">• 设计机械治具框架，集成气缸动作模拟机构、电磁阀与传感器，与 ECU 控制单元联动。</span>
               <span class="bullet-vn">• Thiết kế khung đồ gá cơ khí tích hợp xilanh khí nén mô phỏng chuyển động, van điện từ và cảm biến kết nối ECU.</span>
               <span class="bullet-cn" style="margin-top: 2px;">• 自动采集电压脉冲数据与模拟故障，全面评估电控系统运行稳定性。</span>
               <span class="bullet-vn">• Tự động thu thập dữ liệu điện áp xung và tạo pan bệnh tự động để đánh giá độ tin cậy của toàn bộ hệ thống.</span>
+            </p>
+
+            <!-- VN Only Project Description -->
+            <p class="mode-vn-only" style="font-size: 0.805rem; color: var(--text-muted); margin-top: 4px; line-height: 1.42;">
+              • Thiết kế khung đồ gá cơ khí tích hợp cụm xilanh khí nén mô phỏng chuyển động, van điện từ và hệ thống cảm biến vị trí - áp suất kết nối mạch điều khiển.<br/>
+              • Tự động thu thập dữ liệu điện áp xung, đo kiểm đáp ứng kim phun và tạo pan bệnh tự động để đánh giá độ tin cậy của toàn bộ hệ thống.
             </p>
           </div>
         </div>
@@ -1280,63 +1586,105 @@
     <!-- VERIFIED CERTIFICATES, DEGREES & HONORS (2x2 GRID) -->
     <section class="cert-section-wrapper">
       <h2 class="sec-heading">
-        <span class="sec-heading-left"><i class="fa-solid fa-award"></i> 认证文凭与资格证书</span>
-        <span class="sub-heading-vn">Văn Bằng & Chứng Chỉ Đã Xác Thực</span>
+        <span class="sec-heading-left">
+          <i class="fa-solid fa-award"></i>
+          <span class="mode-bilingual-only">认证文凭与资格证书</span>
+          <span class="mode-vn-only">Văn Bằng & Chứng Chỉ Đã Xác Thực</span>
+        </span>
+        <span class="sub-heading-vn mode-bilingual-only">Văn Bằng & Chứng Chỉ Đã Xác Thực</span>
       </h2>
       <p style="font-size: 0.815rem; color: var(--text-subtle);">
-        <i class="fa-solid fa-circle-info"></i> 所有文凭证书均经原件100%对照核实 (点击查看原件):
+        <i class="fa-solid fa-circle-info"></i>
+        <span class="mode-bilingual-only">所有文凭证书均经原件100%对照核实 (点击查看原件):</span>
+        <span class="mode-vn-only">Toàn bộ văn bằng và chứng chỉ chuyên môn đã được đối chiếu minh chứng gốc 100%:</span>
       </p>
 
       <div class="cert-list-grid">
         
         <!-- 1. Bằng Kỹ Sư ĐH SPKT Nam Định -->
-        <div class="cert-item-card" onclick="openCertModal('汽车工程技术工程师学士学位证书 / Bằng Kỹ Sư Công Nghệ Kỹ Thuật Ô Tô', 'a68c50a8-720a-4b4a-ad54-dd13c8ffa014.jpeg', '南定工业师范大学于2025年06月30日颁发。毕业等级：良好。证书编号：A 003251。')">
+        <div class="cert-item-card" onclick="openCertModal('Bằng Kỹ Sư Công Nghệ Kỹ Thuật Ô Tô', 'a68c50a8-720a-4b4a-ad54-dd13c8ffa014.jpeg', '南定工业师范大学于2025年06月30日颁发。毕业等级：良好。证书编号：A 003251。 / Trường ĐH Sư Phạm Kỹ Thuật Nam Định cấp ngày 30/06/2025. Hạng tốt nghiệp: KHÁ. Số hiệu: A 003251.')">
           <div class="cert-icon"><i class="fa-solid fa-graduation-cap"></i></div>
           <div class="cert-content">
-            <div class="cert-name">汽车工程技术工程师文凭</div>
-            <div class="cert-issuer">南定工业师范大学 | ĐH SPKT Nam Định</div>
+            <div class="cert-name">
+              <span class="mode-bilingual-only">汽车工程技术工程师文凭</span>
+              <span class="mode-vn-only">Bằng Kỹ Sư Công Nghệ KT Ô Tô</span>
+            </div>
+            <div class="cert-issuer">
+              <span class="mode-bilingual-only">南定工业师范大学 | ĐH SPKT Nam Định</span>
+              <span class="mode-vn-only">ĐH Sư Phạm Kỹ Thuật Nam Định</span>
+            </div>
             <div class="cert-footer-row">
-              <span class="cert-rank">良好等级 / Khá</span>
-              <span class="cert-action"><i class="fa-regular fa-eye"></i> 查看原件</span>
+              <span class="cert-rank">
+                <span class="mode-bilingual-only">良好等级 / Khá</span>
+                <span class="mode-vn-only">Hạng Khá</span>
+              </span>
+              <span class="cert-action"><i class="fa-regular fa-eye"></i> <span class="mode-bilingual-only">查看原件</span><span class="mode-vn-only">Xem gốc</span></span>
             </div>
           </div>
         </div>
 
         <!-- 2. Bằng CĐ Nghề Hà Nam -->
-        <div class="cert-item-card" onclick="openCertModal('机械与机电实用工程师大专毕业证书 / Bằng Tốt Nghiệp Cao Đẳng Kỹ Sư Thực Hành', '4b33cc38-3db0-45eb-8aec-fe5e4e10fb04.jpeg', '河南职业大专于2023年04月26日颁发。授予机械与汽车工程实用工程师称号。')">
+        <div class="cert-item-card" onclick="openCertModal('Bằng Tốt Nghiệp Cao Đẳng Kỹ Sư Thực Hành', '4b33cc38-3db0-45eb-8aec-fe5e4e10fb04.jpeg', '河南职业大专于2023年04月26日颁发。授予机械与汽车工程实用工程师称号。 / Trường Cao Đẳng Nghề Hà Nam cấp ngày 26/04/2023. Công nhận danh hiệu Kỹ sư thực hành Cơ khí - Ô tô.')">
           <div class="cert-icon"><i class="fa-solid fa-car"></i></div>
           <div class="cert-content">
-            <div class="cert-name">机械机电实用工程师文凭</div>
-            <div class="cert-issuer">河南职业大专 | Trường CĐ Nghề Hà Nam</div>
+            <div class="cert-name">
+              <span class="mode-bilingual-only">机械机电实用工程师文凭</span>
+              <span class="mode-vn-only">Bằng Kỹ Sư Thực Hành Cơ Khí</span>
+            </div>
+            <div class="cert-issuer">
+              <span class="mode-bilingual-only">河南职业大专 | Trường CĐ Nghề Hà Nam</span>
+              <span class="mode-vn-only">Trường CĐ Nghề Hà Nam</span>
+            </div>
             <div class="cert-footer-row">
-              <span class="cert-rank">正规全日制 / Chính quy</span>
-              <span class="cert-action"><i class="fa-regular fa-eye"></i> 查看原件</span>
+              <span class="cert-rank">
+                <span class="mode-bilingual-only">正规全日制 / Chính quy</span>
+                <span class="mode-vn-only">Chính quy</span>
+              </span>
+              <span class="cert-action"><i class="fa-regular fa-eye"></i> <span class="mode-bilingual-only">查看原件</span><span class="mode-vn-only">Xem gốc</span></span>
             </div>
           </div>
         </div>
 
         <!-- 3. Chuẩn Đầu Ra CNTT Đại Học -->
-        <div class="cert-item-card" onclick="openCertModal('大学阶段信息技术能力标准证书 / Chứng Nhận Chuẩn Đầu Ra CNTT Trình Độ Đại Học', '56979ae0-0b90-4c26-9cc9-84da485531de.jpeg', '南定工业师范大学于2024年05月27日颁发。达到大学级信息技术应用标准。')">
+        <div class="cert-item-card" onclick="openCertModal('Chứng Nhận Chuẩn Đầu Ra CNTT Trình Độ Đại Học', '56979ae0-0b90-4c26-9cc9-84da485531de.jpeg', '南定工业师范大学于2024年05月27日颁发。达到大学级信息技术应用标准。 / ĐH Sư Phạm Kỹ Thuật Nam Định cấp ngày 27/05/2024. Đạt chuẩn đầu ra trình độ ĐH về Ứng dụng CNTT.')">
           <div class="cert-icon"><i class="fa-solid fa-desktop"></i></div>
           <div class="cert-content">
-            <div class="cert-name">大学级信息技术标准证书</div>
-            <div class="cert-issuer">南定工师大 | ĐH SPKT Nam Định</div>
+            <div class="cert-name">
+              <span class="mode-bilingual-only">大学级信息技术标准证书</span>
+              <span class="mode-vn-only">Chuẩn CNTT Trình Độ Đại Học</span>
+            </div>
+            <div class="cert-issuer">
+              <span class="mode-bilingual-only">南定工师大 | ĐH SPKT Nam Định</span>
+              <span class="mode-vn-only">ĐH SPKT Nam Định</span>
+            </div>
             <div class="cert-footer-row">
-              <span class="cert-rank">达标 / Đạt chuẩn ĐH</span>
-              <span class="cert-action"><i class="fa-regular fa-eye"></i> 查看原件</span>
+              <span class="cert-rank">
+                <span class="mode-bilingual-only">达标 / Đạt chuẩn ĐH</span>
+                <span class="mode-vn-only">Đạt chuẩn ĐH</span>
+              </span>
+              <span class="cert-action"><i class="fa-regular fa-eye"></i> <span class="mode-bilingual-only">查看原件</span><span class="mode-vn-only">Xem gốc</span></span>
             </div>
           </div>
         </div>
 
         <!-- 4. Tiếng Anh Pearson Versant -->
-        <div class="cert-item-card" onclick="openCertModal('培生国际英语B1等级认证 / Chứng Chỉ Tiếng Anh Quốc Tế Versant Pearson', '2fb0e02b-ff4e-46ce-b568-aad4f68f3c6d.jpeg', '培生 Versant English Placement Test。GSE评分：46，对应欧洲共同语言框架 CEFR B1 等级。')">
+        <div class="cert-item-card" onclick="openCertModal('Chứng Chỉ Tiếng Anh Quốc Tế Versant Pearson', '2fb0e02b-ff4e-46ce-b568-aad4f68f3c6d.jpeg', '培生 Versant English Placement Test。GSE评分：46，对应欧洲共同语言框架 CEFR B1 等级。 / Pearson Versant English Placement Test. GSE Score: 46 - CEFR B1. Đọc: 68, Nghe: 48, Viết: 42.')">
           <div class="cert-icon"><i class="fa-solid fa-language"></i></div>
           <div class="cert-content">
-            <div class="cert-name">培生国际英语 B1 证书</div>
-            <div class="cert-issuer">培生教育集团 | Pearson Education</div>
+            <div class="cert-name">
+              <span class="mode-bilingual-only">培生国际英语 B1 证书</span>
+              <span class="mode-vn-only">Tiếng Anh Pearson Versant</span>
+            </div>
+            <div class="cert-issuer">
+              <span class="mode-bilingual-only">培生教育集团 | Pearson Education</span>
+              <span class="mode-vn-only">Pearson Education</span>
+            </div>
             <div class="cert-footer-row">
-              <span class="cert-rank">CEFR B1 等级</span>
-              <span class="cert-action"><i class="fa-regular fa-eye"></i> 查看原件</span>
+              <span class="cert-rank">
+                <span class="mode-bilingual-only">CEFR B1 等级</span>
+                <span class="mode-vn-only">Trình độ B1</span>
+              </span>
+              <span class="cert-action"><i class="fa-regular fa-eye"></i> <span class="mode-bilingual-only">查看原件</span><span class="mode-vn-only">Xem gốc</span></span>
             </div>
           </div>
         </div>
@@ -1346,8 +1694,9 @@
 
     <!-- Cam kết & Footer Note -->
     <footer class="cv-foot">
-      <p style="margin-bottom: 3px;"><strong>声明 / Cam đoan:</strong> 本人保证以上所填写的学习经历、专业技术技能及附带的证书照片均完全属实。/ Tôi xin cam đoan các thông tin quá trình học tập, năng lực kỹ thuật và hình ảnh văn bằng chứng chỉ đính kèm là hoàn toàn chính xác.</p>
-      <p>应聘者 <strong>李春进 (Lý Xuân Tiến)</strong> • 电话 / SĐT: <strong>0394 329 121</strong> • 邮箱 / Email: <strong>tienly804@gmail.com</strong></p>
+      <p class="mode-bilingual-only" style="margin-bottom: 3px;"><strong>声明 / Cam đoan:</strong> 本人保证以上所填写的学习经历、专业技术技能及附带的证书照片均完全属实。/ Tôi xin cam đoan các thông tin quá trình học tập, năng lực kỹ thuật và hình ảnh văn bằng chứng chỉ đính kèm là hoàn toàn chính xác.</p>
+      <p class="mode-vn-only" style="margin-bottom: 3px;"><strong>Lời cam đoan:</strong> Tôi xin cam đoan các thông tin quá trình học tập, năng lực kỹ thuật tự động hóa và hình ảnh văn bằng chứng chỉ đính kèm là hoàn toàn chính xác.</p>
+      <p>应聘者 / Ứng viên <strong>李春进 (Lý Xuân Tiến)</strong> • 电话 / SĐT: <strong>0394 329 121</strong> • 邮箱 / Email: <strong>tienly804@gmail.com</strong></p>
     </footer>
 
   </main>
@@ -1378,6 +1727,28 @@
   <script>
     let currentRotation = 0;
 
+    // Language Toggle Function
+    function toggleLanguage() {
+      const currentLang = document.documentElement.getAttribute('data-lang');
+      const newLang = currentLang === 'bilingual' ? 'vn' : 'bilingual';
+      applyLanguage(newLang);
+      localStorage.setItem('cv_lang_mode', newLang);
+    }
+
+    function applyLanguage(lang) {
+      document.documentElement.setAttribute('data-lang', lang);
+      const langBtnText = document.getElementById('langBtnText');
+      const pageTitle = document.getElementById('pageTitle');
+      
+      if (lang === 'vn') {
+        langBtnText.textContent = '中越双语 (Trung - Việt)';
+        pageTitle.textContent = 'CV Lý Xuân Tiến - Kỹ Sư Tự Động Hóa, Robot & Khuôn Mẫu Đồ Gá';
+      } else {
+        langBtnText.textContent = 'Bản Tiếng Việt';
+        pageTitle.textContent = '李春进 - 自动化、机器人与模具治具工程师 | CV Lý Xuân Tiến';
+      }
+    }
+
     // Theme Switcher
     function toggleTheme() {
       const currentTheme = document.documentElement.getAttribute('data-theme');
@@ -1393,13 +1764,22 @@
       localStorage.setItem('cv_theme_pref', newTheme);
     }
 
-    // Load saved theme
+    // Load saved preferences
     (function() {
+      // Load saved theme
       const savedTheme = localStorage.getItem('cv_theme_pref');
       if (savedTheme === 'dark') {
         document.documentElement.setAttribute('data-theme', 'dark');
         const icon = document.querySelector('#themeToggle i');
         if (icon) icon.className = 'fa-solid fa-sun';
+      }
+
+      // Load saved language mode
+      const savedLang = localStorage.getItem('cv_lang_mode');
+      if (savedLang) {
+        applyLanguage(savedLang);
+      } else {
+        applyLanguage('bilingual');
       }
     })();
 
